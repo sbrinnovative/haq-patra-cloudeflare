@@ -2,6 +2,7 @@
    Missing keys fall back to English. Rule checks and letters are English or Hindi (see rules.js). */
 window.HAQ_I18N = window.HAQ_I18N || {};
 window.HAQ_I18N.en = {
+side_next:"What happens next",side_s1:"We read your problem and fill in what we can.",side_s2:"You check each answer and fill any gaps.",side_s3:"You get your rights, your dates, the right officer to contact and a ready letter.",side_answers:"Your answers so far",side_none:"Your answers will show here as you go.",side_upload_tip:"A clear photo works best: flat page, good light, all four corners in view.",
 tagline:"Insurance claim rejected? Bank not returning your money? Get the right letter, to the right office, before the deadline.",
 sub:"Free help in your language. Tell us what happened, upload the letter you got, or answer simple questions. You get your rights in plain words, your dates, the exact people to contact, and a ready letter.",
 promise_free:"Free, no fees ever", promise_private:"Nothing you type is stored", promise_noagent:"No agent will call you",
@@ -85,6 +86,7 @@ footer_disclaimer:"Haq Patra explains public rules and fills letter templates. I
 };
 
 window.HAQ_I18N.hi = {
+side_next:"आगे क्या होगा",side_s1:"हम आपकी समस्या पढ़कर जो हो सके भर देते हैं।",side_s2:"आप हर जवाब जाँचते हैं और जो छूटा है भरते हैं।",side_s3:"आपको आपके अधिकार, तारीखें, संपर्क के लिए सही अधिकारी और तैयार पत्र मिलता है।",side_answers:"अब तक के आपके जवाब",side_none:"जैसे-जैसे आप जवाब देंगे, वे यहाँ दिखेंगे।",side_upload_tip:"साफ़ फ़ोटो सबसे अच्छी रहती है: पेज सीधा, रोशनी अच्छी, चारों कोने दिखें।",
 tagline:"बीमा दावा अस्वीकार हुआ? बैंक पैसा नहीं लौटा रहा? सही दफ़्तर को, समय-सीमा से पहले, सही पत्र भेजें।",
 sub:"आपकी भाषा में मुफ़्त मदद। बताइए क्या हुआ, मिला हुआ पत्र अपलोड कीजिए, या आसान सवालों के जवाब दीजिए। आपको सरल शब्दों में आपके अधिकार, आपकी तारीखें, संपर्क करने वाले सही लोग और तैयार पत्र मिलेगा।",
 promise_free:"मुफ़्त, कोई फ़ीस नहीं", promise_private:"आपका लिखा कुछ भी सेव नहीं होता", promise_noagent:"कोई एजेंट फ़ोन नहीं करेगा",

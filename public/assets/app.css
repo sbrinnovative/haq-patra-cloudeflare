@@ -233,8 +233,7 @@ footer.fine a{color:var(--muted)}
 /* wide screens: use the width, two sections in a row, less scrolling */
 .home{display:flex;flex-direction:column;gap:22px}
 .home-l{display:flex;flex-direction:column;gap:20px}
-.panel{width:100%;max-width:820px}
-.panel.result{max-width:none}
+.panel{width:100%;min-width:0}
 @media (min-width:640px){
   .choices{display:grid;grid-template-columns:1fr 1fr}
   .choices .choice.dk{grid-column:auto}
@@ -243,7 +242,6 @@ footer.fine a{color:var(--muted)}
   .home{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start;padding-top:10px}
   .home .inland{margin-top:58px}
   .home .lead{font-size:1.05rem}
-  .panel.q,.panel.review-panel{max-width:960px}
   .q .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   dl.review{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,.8fr) minmax(0,1.2fr)}
   dl.review dt:nth-of-type(2),dl.review dt:nth-of-type(2)+dd{border-top:0}
@@ -256,3 +254,20 @@ footer.fine a{color:var(--muted)}
   footer.fine ul{grid-template-columns:1fr 1fr}
 }
 @media (min-width:1100px){ .r-checks .checks{grid-template-columns:repeat(3,minmax(0,1fr))} .r-contacts .cards{grid-template-columns:1fr 1fr} .r-contacts .cl{grid-template-columns:minmax(0,1fr) auto;gap:0 8px} .r-contacts .cl-l{grid-column:1/-1;font-size:.8rem} }
+
+/* side column: guidance next to writing and upload, answers so far next to each question */
+.split{display:flex;flex-direction:column;gap:24px}
+.side{display:none}
+.side-card{background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.side-card h3{font-size:1.1rem}
+.inland-lite{background:var(--inland);border:0;border-radius:6px}
+.steps3{margin:0;padding-left:22px;display:grid;gap:8px;font-size:.95rem}
+.steps3 li::marker{font-family:var(--f-display);font-weight:800;color:var(--post)}
+.side-tip{font-size:.9rem;color:var(--muted);border-left:3px solid var(--act);padding-left:12px}
+dl.sofar{margin:0;display:grid;grid-template-columns:1fr;gap:2px}
+dl.sofar dt{font-size:.8rem;color:var(--muted);margin-top:6px}
+dl.sofar dd{margin:0;font-weight:600;font-size:.95rem;overflow-wrap:anywhere}
+@media (min-width:960px){
+  .split{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:44px;align-items:start}
+  .side{display:flex;flex-direction:column;gap:16px;position:sticky;top:16px}
+}

@@ -128,6 +128,21 @@ function postmark(){
 function backLink(to,label){ return '<button type="button" class="linkbtn back" data-go="'+to+'">← '+esc(label||t("back"))+'</button>'; }
 function wireGo(root){ (root||app).querySelectorAll("[data-go]").forEach(function(b){ b.addEventListener("click",function(){ S.view=b.getAttribute("data-go"); render(); }); }); }
 
+/* ---------- side column for wide screens ---------- */
+function split(main, side){ return '<div class="split">'+main+'<aside class="side">'+side+'</aside></div>'; }
+function nextSide(extra){
+  return '<div class="side-card inland-lite"><h3>'+esc(t("side_next"))+'</h3><ol class="steps3">'+["side_s1","side_s2","side_s3"].map(function(k){ return '<li>'+esc(t(k))+'</li>'; }).join("")+'</ol></div>'+
+    (extra?'<p class="side-tip">'+esc(extra)+'</p>':'')+trustRow();
+}
+function answersSide(cur){
+  var rows="";
+  qs().forEach(function(q){ if(q===cur) return;
+    var ids=q.type==="group"?q.fields.filter(function(x){ return !x.when||x.when(S.f); }).map(function(x){return x.id;}):[q.id];
+    ids.forEach(function(id){ var v=S.f[id]; if(v===undefined||v==="") return; rows+='<dt>'+esc(labelFor(id))+'</dt><dd>'+esc(valueText(id,v))+'</dd>'; });
+  });
+  return '<div class="side-card"><h3>'+esc(t("side_answers"))+'</h3>'+(rows?'<dl class="sofar">'+rows+'</dl>':'<p class="muted small">'+esc(t("side_none"))+'</p>')+'</div>';
+}
+
 /* ---------- VIEWS ---------- */
 var VIEWS={};
 
@@ -166,6 +181,7 @@ VIEWS.words=function(){
     '<label class="sr" for="story">'+esc(t("words_title"))+'</label><textarea id="story" rows="7" placeholder="'+esc(t("words_placeholder"))+'"></textarea>'+
     (micSupported()?'<div class="row"><button type="button" class="btn ghost" id="micBtn">'+esc(t("mic_start"))+'</button><span class="hint">'+esc(t("mic_note"))+'</span></div>':'')+
     consentBlock()+'<div class="row"><button type="button" class="btn" id="goBtn">'+esc(t("analyse_btn"))+'</button></div><p class="status" id="st" role="status" aria-live="polite"></p></section>';
+  app.innerHTML=split(app.innerHTML, nextSide());
   wireGo(); var ta=$("#story");
   if(micSupported()) $("#micBtn").addEventListener("click",function(e){ startMic(ta,e.target); });
   $("#goBtn").addEventListener("click",function(e){ var v=ta.value.trim(); if(v.length<15){ $("#st").textContent=t("too_short"); return; } runAnalysis(v,$("#st"),e.target); });
@@ -177,6 +193,7 @@ VIEWS.upload=function(){
     '<p class="status" id="st" role="status" aria-live="polite"></p><div id="after" hidden>'+
     '<h3>'+esc(t("review_text_title"))+'</h3><p class="muted">'+esc(t("review_text_hint"))+'</p><label class="sr" for="doc">'+esc(t("review_text_title"))+'</label><textarea id="doc" rows="10"></textarea>'+
     consentBlock()+'<div class="row"><button type="button" class="btn" id="goBtn">'+esc(t("analyse_btn"))+'</button></div></div></section>';
+  app.innerHTML=split(app.innerHTML, nextSide(t("side_upload_tip")));
   wireGo(); var orig="";
   $("#file").addEventListener("change",async function(e){
     var file=e.target.files&&e.target.files[0]; if(!file) return;
@@ -277,7 +294,7 @@ VIEWS.wizard=function(){
     if(q.id==="details") h+='<p class="muted small">'+esc(t("details_note"))+'</p>';
   }
   h+='<p class="status" id="st" role="status" aria-live="polite"></p><div class="row nav"><button type="button" class="btn ghost" id="prev">'+esc(t("back"))+'</button><button type="button" class="btn" id="next">'+esc(t("next"))+'</button></div></section>';
-  app.innerHTML=h;
+  app.innerHTML=split(h, answersSide(q));
   app.querySelectorAll("[data-k]").forEach(function(inp){ inp.addEventListener("input",onInput); inp.addEventListener("change",onInput); });
   function onInput(e){ var k=e.target.getAttribute("data-k"); S.f[k]=e.target.value; S.found[k]=1;
     if(k==="insurer"||k==="bank"){ var on=$("#otherName"); if(on) on.hidden=(e.target.value!=="other"); }
