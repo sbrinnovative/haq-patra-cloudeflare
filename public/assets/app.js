@@ -4,7 +4,9 @@
 var R=window.HAQ_RULES, IN=window.HAQ_INTAKE, I18N=window.HAQ_I18N;
 var LANGS=[["en","English"],["hi","हिंदी"],["mr","मराठी"],["bn","বাংলা"],["ta","தமிழ்"],["te","తెలుగు"],["gu","ગુજરાતી"],["kn","ಕನ್ನಡ"]];
 var VOICE={en:"en-IN",hi:"hi-IN",mr:"mr-IN",bn:"bn-IN",ta:"ta-IN",te:"te-IN",gu:"gu-IN",kn:"kn-IN"};
-var FONT={bn:"Noto+Sans+Bengali",ta:"Noto+Sans+Tamil",te:"Noto+Sans+Telugu",gu:"Noto+Sans+Gujarati",kn:"Noto+Sans+Kannada"};
+var FONT={bn:"Noto+Sans+Bengali:wght@400;600&family=Baloo+Da+2:wght@700",ta:"Noto+Sans+Tamil:wght@400;600&family=Baloo+Thambi+2:wght@700",te:"Noto+Sans+Telugu:wght@400;600&family=Baloo+Tammudu+2:wght@700",gu:"Noto+Sans+Gujarati:wght@400;600&family=Baloo+Bhai+2:wght@700",kn:"Noto+Sans+Kannada:wght@400;600&family=Baloo+Tamma+2:wght@700"};
+var ICON={words:'<path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 9h8M8 12.5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',upload:'<path d="M6 3h8l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 17v-6m-3 3l3-3 3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',questions:'<path d="M10 6h10M10 12h10M10 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5 2.5-2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5.3" cy="18" r="1.6" fill="currentColor"/>',go:'<path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',tick:'<path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',phone:'<path d="M6.6 3h3l1.6 4.4-2.2 1.4a11 11 0 0 0 6.2 6.2l1.4-2.2L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3z" fill="currentColor"/>'};
+function svg(n,cls){ return '<svg viewBox="0 0 24 24" aria-hidden="true"'+(cls?' class="'+cls+'"':'')+'>'+ICON[n]+'</svg>'; }
 var STATES=["Andaman and Nicobar Islands","Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chandigarh","Chhattisgarh","Dadra and Nagar Haveli and Daman and Diu","Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Ladakh","Lakshadweep","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Puducherry","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"];
 
 /* ---------- state ---------- */
@@ -29,7 +31,7 @@ function setLang(l){
     document.head.appendChild(s); return;
   }
   S.lang=l; S.trans=null; try{ localStorage.setItem("haq_lang",l); }catch(e){}
-  if(FONT[l]&&!document.getElementById("font-"+l)){ var ln=document.createElement("link"); ln.id="font-"+l; ln.rel="stylesheet"; ln.href="https://fonts.googleapis.com/css2?family="+FONT[l]+":wght@400;600&display=swap"; document.head.appendChild(ln); }
+  if(FONT[l]&&!document.getElementById("font-"+l)){ var ln=document.createElement("link"); ln.id="font-"+l; ln.rel="stylesheet"; ln.href="https://fonts.googleapis.com/css2?family="+FONT[l]+"&display=swap"; document.head.appendChild(ln); }
   if(!S.letterLangSet) S.letterLang=(l==="hi"?"hi":"en");
   document.querySelectorAll("[data-i18n]").forEach(function(n){ n.textContent=t(n.getAttribute("data-i18n")); });
   var sel=$("#langSel"); if(sel) sel.value=l;
@@ -113,23 +115,29 @@ function answered(q){
 function pending(){ return qs().filter(function(q){ if(!S.fromAnalysis) return true; if(!answered(q)) return true; if(q.type==="group") return !(q.req||[]).every(function(k){ return S.found[k]; }); return !S.found[q.id]; }); }
 
 /* ---------- shared header / footer pieces ---------- */
-function trustRow(){ return '<div class="trust"><span>'+esc(t("promise_free"))+'</span><span>'+esc(t("promise_private"))+'</span><span>'+esc(t("promise_noagent"))+'</span></div>'; }
-function backLink(to,label){ return '<button type="button" class="linkbtn" data-go="'+to+'">← '+esc(label||t("back"))+'</button>'; }
+function trustRow(){ return '<ul class="trust">'+["promise_free","promise_private","promise_noagent"].map(function(k){ return '<li>'+svg("tick")+esc(t(k))+'</li>'; }).join("")+'</ul>'; }
+function postmark(){
+  var d=R.today(), mon=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"][d.getMonth()];
+  return '<div class="postmark" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="pmTop" d="M24 60a36 36 0 0 1 72 0"/><path id="pmBot" d="M13 60a47 47 0 0 0 94 0"/></defs>'+
+    '<circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="60" cy="60" r="33" fill="none" stroke="currentColor" stroke-width="2"/>'+
+    '<text font-family="Baloo 2, sans-serif" font-weight="800" font-size="11.5" letter-spacing="2" fill="currentColor"><textPath href="#pmTop" startOffset="50%" text-anchor="middle">HAQ PATRA</textPath></text>'+
+    '<text font-family="Baloo 2, Mukta, sans-serif" font-weight="700" font-size="12" fill="currentColor"><textPath href="#pmBot" startOffset="50%" text-anchor="middle">हक़ पत्र</textPath></text>'+
+    '<text x="60" y="57" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="800" font-size="15" fill="currentColor">'+d.getDate()+' '+mon+'</text>'+
+    '<text x="60" y="73" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="700" font-size="12" fill="currentColor">'+d.getFullYear()+'</text></svg></div>';
+}
+function backLink(to,label){ return '<button type="button" class="linkbtn back" data-go="'+to+'">← '+esc(label||t("back"))+'</button>'; }
 function wireGo(root){ (root||app).querySelectorAll("[data-go]").forEach(function(b){ b.addEventListener("click",function(){ S.view=b.getAttribute("data-go"); render(); }); }); }
 
 /* ---------- VIEWS ---------- */
 var VIEWS={};
 
 VIEWS.home=function(){
-  var h='<section class="hero"><h1>'+esc(t("tagline"))+'</h1><p class="lead">'+esc(t("sub"))+'</p>'+trustRow()+'</section>'+
-    '<div class="urgent" role="note"><b>'+esc(t("urgent_title"))+'</b> '+esc(t("urgent_body"))+'</div>'+
-    '<section class="starts" aria-labelledby="startH"><h2 id="startH">'+esc(t("home_q"))+'</h2>'+
-    '<button type="button" class="start" data-start="words"><span class="start-t">'+esc(t("start_words_t"))+'</span><span class="start-d">'+esc(t("start_words_d"))+'</span></button>'+
-    '<button type="button" class="start" data-start="upload"><span class="start-t">'+esc(t("start_upload_t"))+'</span><span class="start-d">'+esc(t("start_upload_d"))+'</span></button>'+
-    '<button type="button" class="start" data-start="questions"><span class="start-t">'+esc(t("start_questions_t"))+'</span><span class="start-d">'+esc(t("start_questions_d"))+'</span></button>'+
-    '<label class="check-row"><input type="checkbox" id="helperChk"'+(S.helper?" checked":"")+'> <span>'+esc(t("helper_label"))+'</span></label>'+
-    (S.helper?'<p class="note">'+esc(t("helper_note"))+'</p>':'')+
-    '</section>';
+  function opt(k){ return '<button type="button" class="start" data-start="'+k+'"><span class="ic">'+svg(k)+'</span><span><span class="start-t">'+esc(t("start_"+k+"_t"))+'</span><span class="start-d">'+esc(t("start_"+k+"_d"))+'</span></span>'+svg("go","go")+'</button>'; }
+  var h='<div class="sos" role="note"><p><b>'+esc(t("urgent_title"))+'</b> '+esc(t("urgent_body"))+'</p><a class="call" href="tel:1930">'+svg("phone")+'1930</a></div>'+
+    '<section class="hero"><h1>'+esc(t("tagline"))+'</h1>'+trustRow()+'</section>'+
+    '<section class="inland" aria-labelledby="startH">'+postmark()+'<h2 id="startH">'+esc(t("home_q"))+'</h2><div class="starts">'+opt("words")+opt("upload")+opt("questions")+'</div>'+
+    '<div class="helper"><label class="check-row"><input type="checkbox" id="helperChk"'+(S.helper?" checked":"")+'> <span>'+esc(t("helper_label"))+'</span></label>'+
+    (S.helper?'<p class="note" style="margin-top:8px">'+esc(t("helper_note"))+'</p>':'')+'</div></section><p class="lead">'+esc(t("sub"))+'</p>';
   app.innerHTML=h;
   $("#helperChk").addEventListener("change",function(e){ S.helper=e.target.checked; render(); });
   app.querySelectorAll("[data-start]").forEach(function(b){ b.addEventListener("click",function(){
@@ -165,7 +173,7 @@ VIEWS.words=function(){
 
 VIEWS.upload=function(){
   app.innerHTML='<section class="panel">'+backLink("home")+'<h2>'+esc(t("upload_title"))+'</h2><p class="muted">'+esc(t("upload_hint"))+'</p>'+
-    '<label class="filebtn btn" for="file">'+esc(t("upload_choose"))+'</label><input type="file" id="file" accept="application/pdf,image/*,.txt" class="sr">'+
+    '<div class="drop">'+svg("upload")+'<label class="filebtn btn" for="file" style="align-self:center">'+esc(t("upload_choose"))+'</label><input type="file" id="file" accept="application/pdf,image/*,.txt" class="sr"><span class="hint">PDF, JPG, PNG</span></div>'+
     '<p class="status" id="st" role="status" aria-live="polite"></p><div id="after" hidden>'+
     '<h3>'+esc(t("review_text_title"))+'</h3><p class="muted">'+esc(t("review_text_hint"))+'</p><label class="sr" for="doc">'+esc(t("review_text_title"))+'</label><textarea id="doc" rows="10"></textarea>'+
     consentBlock()+'<div class="row"><button type="button" class="btn" id="goBtn">'+esc(t("analyse_btn"))+'</button></div></div></section>';
@@ -304,7 +312,7 @@ VIEWS.review=function(){
     var ids=q.type==="group"?q.fields.filter(function(x){ return !x.when||x.when(S.f); }).map(function(x){return x.id;}):[q.id];
     ids.forEach(function(id){ rows+='<dt>'+esc(labelFor(id))+'</dt><dd>'+esc(valueText(id,S.f[id]))+' <button type="button" class="linkbtn small" data-edit="'+i+'">'+esc(t("change"))+'</button></dd>'; });
   });
-  app.innerHTML='<section class="panel"><h2>'+esc(t("review_title"))+'</h2><dl class="review">'+rows+'</dl><div class="row nav"><button type="button" class="btn ghost" id="prev">'+esc(t("back"))+'</button><button type="button" class="btn" id="plan">'+esc(t("see_plan"))+'</button></div></section>';
+  app.innerHTML='<section class="panel review-panel"><h2>'+esc(t("review_title"))+'</h2><dl class="review">'+rows+'</dl><div class="row nav"><button type="button" class="btn ghost" id="prev">'+esc(t("back"))+'</button><button type="button" class="btn" id="plan">'+esc(t("see_plan"))+'</button></div></section>';
   app.querySelectorAll("[data-edit]").forEach(function(b){ b.addEventListener("click",function(){ S.fromAnalysis=false; S.qi=+b.getAttribute("data-edit"); S.view="wizard"; render(); }); });
   $("#prev").addEventListener("click",function(){ var l=S.fromAnalysis?pending():qs(); S.qi=Math.max(0,l.length-1); S.view=l.length?"wizard":"understood"; render(); });
   $("#plan").addEventListener("click",function(){ S.tab=-1; S.trans=null; S.view="result"; render(); });
