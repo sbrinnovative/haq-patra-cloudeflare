@@ -1,0 +1,1672 @@
+{
+  "dataset": "Health insurer grievance contacts",
+  "checked": "2026-10-16",
+  "primary_cross_source": "https://cioins.co.in/GRONonLife",
+  "notes": [
+    "gro.* fields come from the Council for Insurance Ombudsmen GRO list (cioins.co.in/GRONonLife). That page shows two email columns: 'officer_email' (personal) and 'email' (GRO mailbox). Prefer the insurer's own escalation ladder for letters; use GRO email as the final internal level.",
+    "1860 numbers are shared-cost, not toll-free; they are kept in other_phones.",
+    "null/empty means not verifiable from an official page on the check date. Nothing was filled from third-party sites.",
+    "IRDAI's policyholder.gov.in GRO list is outdated (still shows Max Bupa, Bharti AXA, magma-hdi). Used only to corroborate or where noted."
+  ],
+  "insurers": [
+    {
+      "id": "star",
+      "name": "Star Health and Allied Insurance Co. Ltd.",
+      "aliases": [
+        "Star Health",
+        "Star"
+      ],
+      "type": "standalone_health",
+      "grievance_emails": [
+        "support@starhealth.in"
+      ],
+      "toll_free": [
+        "1800-425-2255",
+        "1800-102-4477"
+      ],
+      "other_phones": [
+        {
+          "label": "Customer care helpline",
+          "number": "044-69006900"
+        },
+        {
+          "label": "Grievance care (site navigation)",
+          "number": "044-43664600"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "044-40020888 (senior citizens helpline)",
+          "044-69007500 (senior citizen grievance)"
+        ],
+        "email": null
+      },
+      "gro": {
+        "name": "Mr. S. Chandrabose",
+        "email": "gro@starhealth.in",
+        "officer_email": "chandrabose.s@starhealth.in",
+        "phone": null,
+        "address": "Corporate Grievance Department, 4th floor, Balaji Complex, No. 15, Whites Lane, Whites Road, Royapettah, Chennai 600014"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "support@starhealth.in from registered email; customer care 044-69006900"
+        },
+        {
+          "level": "2-4",
+          "channel": "Collapsed on page; contacts not visible. Use GRO gro@starhealth.in (CIO list)."
+        }
+      ],
+      "grievance_page_url": "https://www.starhealth.in/grievance-redressal/",
+      "online_grievance_form": null,
+      "notes": "Toll-free numbers listed on the page as Buy/Renewal lines. Branch/zonal grievance officer lists are PDFs linked from Level 1.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.starhealth.in/grievance-redressal/",
+          "fields": "grievance_emails,toll_free,other_phones,senior_citizen,escalation",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "care",
+      "name": "Care Health Insurance Ltd.",
+      "aliases": [
+        "Care Health",
+        "Care Insurance",
+        "Religare Health"
+      ],
+      "type": "standalone_health",
+      "grievance_emails": [
+        "customerfirst@careinsurance.com"
+      ],
+      "toll_free": [
+        "1800-102-4488 (services)",
+        "1800-102-4499 (sales)"
+      ],
+      "other_phones": [
+        {
+          "label": "WhatsApp",
+          "number": "8860402452"
+        }
+      ],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr. Anoop Singh",
+        "email": "chilegal@careinsurance.com",
+        "officer_email": "gro@careinsurance.com",
+        "phone": null,
+        "address": "Vipul Tech Square, Tower C, 3rd Floor, Sector - 43, Golf Course Road, Gurugram 122009"
+      },
+      "escalation": [],
+      "grievance_page_url": "https://www.careinsurance.com/customer-grievance-redressal.html",
+      "online_grievance_form": null,
+      "notes": "CIO list shows 'gro@careinsurance.com' in the officer-email column and 'chilegal@careinsurance.com' in the GRO-email column; use gro@careinsurance.com for GRO letters (also in IRDAI list). Care's own grievance page did not show GRO/escalation levels when fetched.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.careinsurance.com/customer-grievance-redressal.html",
+          "fields": "grievance_emails,WhatsApp,postal address",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.careinsurance.com/contact-us.html",
+          "fields": "toll_free",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://policyholder.gov.in/web/guest/list-of-gros",
+          "fields": "gro@careinsurance.com corroborated",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "nivabupa",
+      "name": "Niva Bupa Health Insurance Co. Ltd.",
+      "aliases": [
+        "Niva Bupa",
+        "Max Bupa"
+      ],
+      "type": "standalone_health",
+      "grievance_emails": [],
+      "toll_free": [
+        "1860-500-8888 (customer helpline; 1860 numbers are not toll-free)"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "email": "seniorcitizensupport@nivabupa.com",
+        "phones": []
+      },
+      "gro": {
+        "name": "Mr Vikar Alam",
+        "email": "gro@nivabupa.com",
+        "officer_email": "vikar.alam@nivabupa.com",
+        "phone": null,
+        "address": "3rd floor, Capital Cyberspace, Golf Course Extension Road, Sector 59, Gurgaon 122 101"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "1860-500-8888 / Insta Assist / branch / Customer Services Unit, Logix Infotec Park, D-5, 2nd Floor, Sector-59, Noida 201301"
+        },
+        {
+          "level": 2,
+          "channel": "web form ?page=grievance"
+        },
+        {
+          "level": 3,
+          "channel": "GRO via web form; gro@nivabupa.com per CIO list"
+        }
+      ],
+      "grievance_page_url": "https://transactions.nivabupa.com/pages/grievance-redressal.aspx",
+      "online_grievance_form": "https://rules.nivabupa.com/customer-service/?page=grievance",
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://transactions.nivabupa.com/pages/grievance-redressal.aspx",
+          "fields": "helpline,senior_citizen,escalation,form",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "abhi",
+      "name": "Aditya Birla Health Insurance Co. Ltd.",
+      "aliases": [
+        "Aditya Birla Health",
+        "ABHI",
+        "Activ Health"
+      ],
+      "type": "standalone_health",
+      "grievance_emails": [
+        "care.healthinsurance@adityabirlacapital.com"
+      ],
+      "toll_free": [
+        "1800-270-7000"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "email": "seniorcitizen.healthinsurance@adityabirlacapital.com",
+        "phones": []
+      },
+      "gro": {
+        "name": "Mr. Naveen Chandra",
+        "email": "gro.healthinsurance@adityabirlacapital.com",
+        "officer_email": "naveen.c@adityabirlacapital.com",
+        "phone": null,
+        "address": "9th floor, One World Centre, Tower 1, Jupiter Mill Compound, S B Marg, Elphinstone Road, Mumbai 400013"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "care.healthinsurance@adityabirlacapital.com / 1800 270 7000"
+        },
+        {
+          "level": 2,
+          "channel": "carehead.healthinsurance@adityabirlacapital.com (Head - Customer Care)"
+        },
+        {
+          "level": 3,
+          "channel": "gro.healthinsurance@adityabirlacapital.com (GRO)"
+        }
+      ],
+      "grievance_page_url": null,
+      "online_grievance_form": null,
+      "notes": "Website HTML pages block automated fetching (robots). Data from the insurer's Grievance Redressal Policy PDF, version 1.8 dated 25 Oct 2024.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.adityabirlacapital.com/healthinsurance/assets/pdf/GrievanceRedressalPolicy_New.pdf",
+          "fields": "grievance_emails,toll_free,senior_citizen,escalation",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "manipalcigna",
+      "name": "ManipalCigna Health Insurance Co. Ltd.",
+      "aliases": [
+        "ManipalCigna",
+        "Manipal Cigna",
+        "Cigna TTK"
+      ],
+      "type": "standalone_health",
+      "grievance_emails": [
+        "headcustomercare@manipalcigna.com",
+        "customercare@manipalcigna.com"
+      ],
+      "toll_free": [
+        "1800-102-4462"
+      ],
+      "other_phones": [
+        {
+          "label": "Outside India",
+          "number": "+91-22-49854100"
+        },
+        {
+          "label": "Level 2/3 desk (Mon-Fri 10-6)",
+          "number": "022-61703600"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "1800-102-4462 then press 6"
+        ],
+        "email": "Seniorcitizensupport@Manipalcigna.com"
+      },
+      "gro": {
+        "name": "Ms. Rakhee Desousa",
+        "email": "gro@manipalcigna.com",
+        "officer_email": "rakhee.desousa@manipalcigna.com",
+        "phone": null,
+        "address": "Techweb Center, 2nd Floor New Link Road, Anand Nagar, Jogeshwari (West), Mumbai 400 102"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "headcustomercare@manipalcigna.com"
+        },
+        {
+          "level": 2,
+          "name": "Mrs. Rakhee Desousa (GRO)",
+          "channel": "complaints@manipalcigna.com"
+        },
+        {
+          "level": 3,
+          "name": "Mr. Sameer Bhatnagar (Chief GRO)",
+          "channel": "compliance@manipalcigna.com"
+        }
+      ],
+      "grievance_page_url": "https://www.manipalcigna.com/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": "Insurer page gives Level 2 GRO email complaints@manipalcigna.com; CIO list gives gro@manipalcigna.com.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.manipalcigna.com/grievance-redressal",
+          "fields": "all except CIO gro email",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "galaxy",
+      "name": "Galaxy Health Insurance Co. Ltd.",
+      "aliases": [
+        "Galaxy Health"
+      ],
+      "type": "standalone_health",
+      "grievance_emails": [
+        "gro@galaxyhealth.com"
+      ],
+      "toll_free": [
+        "1800-203-0007"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [
+          "1800-203-0007 press 2"
+        ],
+        "email": "seniorcitizengrievance@galaxyhealth.com"
+      },
+      "gro": {
+        "name": "Smt. G. Veni",
+        "email": "gro@galaxyhealth.com",
+        "officer_email": "veni.g@galaxyhealth.com",
+        "phone": "044-40017238; 1800-203-0007 press 3",
+        "address": "Prestige Polygon, 12th Top floor (P), 471, Anna Salai, Nandanam, Chennai 600 035"
+      },
+      "escalation": [],
+      "grievance_page_url": "https://www.galaxyhealth.com/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.galaxyhealth.com/grievance-redressal",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "narayana",
+      "name": "Narayana Health Insurance Ltd.",
+      "aliases": [
+        "Narayana Health Insurance",
+        "NH Insurance",
+        "Aditi"
+      ],
+      "type": "standalone_health",
+      "grievance_emails": [
+        "grievance@narayanahealth.insurance"
+      ],
+      "toll_free": [],
+      "other_phones": [
+        {
+          "label": "Grievance support (Mon-Sat 8-8)",
+          "number": "080-48248735"
+        },
+        {
+          "label": "Call",
+          "number": "+91-9821034071"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "1800-203-0234"
+        ],
+        "email": null
+      },
+      "gro": {
+        "name": "Ramagopalan K",
+        "email": "gro@narayanahealth.insurance",
+        "officer_email": "ramagopalan.k@narayanahealth.insurance",
+        "phone": "+91-8050731511",
+        "address": "261/A, Second Floor, Bommasandra Industrial Area, Anekal Taluk, Bengaluru 560099"
+      },
+      "escalation": [],
+      "grievance_page_url": "https://www.narayanahealth.insurance/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": "GRO name differs: insurer page says Ms. Bharathi Bai A G; CIO list says Ramagopalan K. Both give gro@narayanahealth.insurance. Licensed (listed by CIO).",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.narayanahealth.insurance/grievance-redressal",
+          "fields": "grievance_emails,phones,senior_citizen,gro phone, GRO name Bharathi Bai A G",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "newindia",
+      "name": "The New India Assurance Co. Ltd.",
+      "aliases": [
+        "New India",
+        "New India Assurance",
+        "NIA",
+        "NIACL"
+      ],
+      "type": "public_general",
+      "grievance_emails": [
+        "customercare.ho@newindia.co.in"
+      ],
+      "toll_free": [
+        "1800-209-1415"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [
+          "1800-209-1415"
+        ],
+        "email": null
+      },
+      "gro": {
+        "name": "Mr K K Sunil Kumar",
+        "email": "gro.io@newindia.co.in",
+        "officer_email": "kk.sunilkumar@newindia.co.in",
+        "phone": null,
+        "address": "New India Assurance Head Office: 87, M G Road, Fort, Mumbai 400 001"
+      },
+      "escalation": [],
+      "grievance_page_url": null,
+      "online_grievance_form": "https://ltportalug.newindia.co.in (My Grievance tab)",
+      "notes": "CIO list GRO email is gro.io@newindia.co.in; IRDAI older list has gro@newindia.co.in. Grievance page content is JS-rendered and could not be read.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.newindia.co.in/contact-us",
+          "fields": "grievance_emails,toll_free,senior_citizen,form",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "uiic",
+      "name": "United India Insurance Co. Ltd.",
+      "aliases": [
+        "United India",
+        "UIIC"
+      ],
+      "type": "public_general",
+      "grievance_emails": [],
+      "toll_free": [],
+      "other_phones": [],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Ms. M. Jayasri",
+        "email": "gro@uiic.co.in",
+        "officer_email": "mjayashree@uiic.co.in",
+        "phone": null,
+        "address": "24, Whites Road, Chennai, Tamil Nadu 600014"
+      },
+      "escalation": [],
+      "grievance_page_url": null,
+      "online_grievance_form": null,
+      "notes": "Official site content not readable by fetch; toll-free not verified from an official page (IRDAI list value is corrupted).",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://policyholder.gov.in/web/guest/list-of-gros",
+          "fields": "gro email corroborated",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "oriental",
+      "name": "The Oriental Insurance Co. Ltd.",
+      "aliases": [
+        "Oriental Insurance",
+        "OICL"
+      ],
+      "type": "public_general",
+      "grievance_emails": [],
+      "toll_free": [
+        "1800-118-485"
+      ],
+      "other_phones": [],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Shri. Vatsal Nath",
+        "email": "gro@orientalinsurance.co.in",
+        "officer_email": "vatsal.nath@orientalinsurance.co.in",
+        "phone": null,
+        "address": "Corporate Office, Block - 4, Plate-A, NBCC Office Complex, Kidwai Nagar East, New Delhi 110023"
+      },
+      "escalation": [],
+      "grievance_page_url": "https://orientalinsurance.org.in/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": "Grievance page is JS-only; toll-free from IRDAI policyholder.gov.in GRO list (older list, recheck).",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://policyholder.gov.in/web/guest/list-of-gros",
+          "fields": "toll_free, gro email corroborated",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "national",
+      "name": "National Insurance Co. Ltd.",
+      "aliases": [
+        "National Insurance",
+        "NICL"
+      ],
+      "type": "public_general",
+      "grievance_emails": [],
+      "toll_free": [
+        "1800-345-0330"
+      ],
+      "other_phones": [],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr. B C Dabhi",
+        "email": "griho@nic.co.in",
+        "officer_email": "bc.dabhi@nic.co.in",
+        "phone": null,
+        "address": "National Insurance Co. Ltd., Head Office, CRM Department, 10th Floor, Premises No. 18-0374, Plot No. CBD-81, New Town, Kolkata 700156"
+      },
+      "escalation": [],
+      "grievance_page_url": null,
+      "online_grievance_form": null,
+      "notes": "Website blocks automated fetching (robots). Toll-free from IRDAI policyholder.gov.in GRO list (older list, recheck).",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://policyholder.gov.in/web/guest/list-of-gros",
+          "fields": "toll_free, gro email corroborated",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "icicilombard",
+      "name": "ICICI Lombard General Insurance Co. Ltd.",
+      "aliases": [
+        "ICICI Lombard"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "customersupport@icicilombard.com"
+      ],
+      "toll_free": [
+        "1800-2666"
+      ],
+      "other_phones": [
+        {
+          "label": "WhatsApp",
+          "number": "+91-7738282666"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "1800-2666 (24x7)"
+        ],
+        "email": "seniorcitizencare@icicilombard.com"
+      },
+      "gro": {
+        "name": "Ms. Pooja Raiyani",
+        "email": "gro@icicilombard.com",
+        "officer_email": "grievance@icicilombard.com",
+        "phone": null,
+        "address": "ICICI Lombard House, 414, Veer Savarkar Marg, Near Siddhi Vinayak Temple, Prabhadevi, Mumbai 400025"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "customersupport@icicilombard.com / 1800 2666",
+          "form": "https://service.icicilombard.com/GrievanceRedressal/GrievanceRedressalStep1"
+        },
+        {
+          "level": 2,
+          "name": "Navari R, DVP Customer Support",
+          "form": "https://service.icicilombard.com/GrievanceRedressal/GrievanceRedressalStep2"
+        },
+        {
+          "level": 3,
+          "name": "Pooja R, GRO",
+          "form": "https://service.icicilombard.com/GrievanceRedressal/GrievanceRedressalStep3"
+        }
+      ],
+      "grievance_page_url": "https://www.icicilombard.com/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": "Insurer page publishes web forms, not emails, for levels 2 and 3. gro@icicilombard.com from CIO list.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.icicilombard.com/grievance-redressal",
+          "fields": "grievance_emails,toll_free,senior_citizen,escalation",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "hdfcergo",
+      "name": "HDFC ERGO General Insurance Co. Ltd.",
+      "aliases": [
+        "HDFC ERGO",
+        "HDFC Ergo"
+      ],
+      "type": "private_general",
+      "grievance_emails": [],
+      "toll_free": [
+        "1800-2677-444"
+      ],
+      "other_phones": [
+        {
+          "label": "Claims/policy",
+          "number": "022-61582020"
+        },
+        {
+          "label": "Women's desk",
+          "number": "022-61582055"
+        },
+        {
+          "label": "WhatsApp",
+          "number": "8169500500"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "022-61582026"
+        ],
+        "email": "seniorcitizen@hdfcergo.com"
+      },
+      "gro": {
+        "name": "Mr Arun Kumar Sharma",
+        "email": "gro@hdfcergo.com",
+        "officer_email": "arun.sharma@hdfcergo.com",
+        "phone": null,
+        "address": "D-301, 3rd floor, Eastern Business District, Magnet Mall, LBS Marg, Bhandup West, Mumbai 400 078"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "1800 2677 444 or online Raise a Grievance form"
+        },
+        {
+          "level": 2,
+          "name": "Customer Grievance Officer desk",
+          "channel": "cgo@hdfcergo.com"
+        }
+      ],
+      "grievance_page_url": "https://www.hdfcergo.com/customer-voice/grievances",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.hdfcergo.com/customer-voice/grievances",
+          "fields": "toll_free,phones,senior_citizen,escalation",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "bajaj",
+      "name": "Bajaj General Insurance Ltd.",
+      "aliases": [
+        "Bajaj General",
+        "Bajaj Allianz",
+        "Bajaj Allianz General"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "careforyou@bajajgeneral.com"
+      ],
+      "toll_free": [
+        "1800-209-5858"
+      ],
+      "other_phones": [
+        {
+          "label": "WhatsApp/BOING",
+          "number": "+91-7507425858"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "1800-209-5858"
+        ],
+        "email": "seniorcitizen@bajajgeneral.com"
+      },
+      "gro": {
+        "name": "Mr Jerome Vincent",
+        "email": "ggro@bajajgeneral.com",
+        "officer_email": "jerome.vincent@bajajgeneral.com",
+        "phone": null,
+        "address": "Bajaj Finserv Corporate Office, 1st floor, Sr. No. 208/1-B, Viman Nagar Ave 1, behind Weikfield IT Citi Info Park, Viman Nagar, Pune 411014"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "careforyou@bajajgeneral.com / 1800-209-5858"
+        },
+        {
+          "level": 2,
+          "name": "Mr. Jerome Vincent (Grievance Officer)",
+          "channel": "ggro@bajajgeneral.com"
+        },
+        {
+          "level": 3,
+          "name": "Head Customer Service",
+          "channel": "head.customerservice@bajajgeneral.com"
+        }
+      ],
+      "grievance_page_url": "https://www.bajajgeneralinsurance.com/about-us/customer-service.html",
+      "online_grievance_form": "https://www.bajajgeneralinsurance.com/forms/form-online-grievance.html",
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.bajajgeneralinsurance.com/about-us/customer-service.html",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "tataaig",
+      "name": "Tata AIG General Insurance Co. Ltd.",
+      "aliases": [
+        "Tata AIG"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "customersupport@tataaig.com"
+      ],
+      "toll_free": [],
+      "other_phones": [
+        {
+          "label": "Customer service (charges apply)",
+          "number": "022-64898282"
+        },
+        {
+          "label": "Tolled",
+          "number": "022-66939500"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "1800-267-1955 (senior citizen policyholders only)"
+        ],
+        "email": null
+      },
+      "gro": {
+        "name": "Mr. Anith Paul",
+        "email": "gro@tataaig.com",
+        "officer_email": "Anith.Paul@tataaig.com",
+        "phone": null,
+        "address": "7th and 8th floors, R Tech Park, Village Pahadi, Taluka Goregaon East, Mumbai 400 063"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "manager.customersupport@tataaig.com"
+        },
+        {
+          "level": 2,
+          "name": "Head - Customer Services",
+          "channel": "head.customerservices@tataaig.com"
+        }
+      ],
+      "grievance_page_url": "https://www.tataaig.com/grievance-redressal-policy",
+      "online_grievance_form": null,
+      "notes": "Location-wise GRO list: https://www.tataaig.com/s3/GRO_List_cf874de99d.pdf",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.tataaig.com/grievance-redressal-policy",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "sbigeneral",
+      "name": "SBI General Insurance Co. Ltd.",
+      "aliases": [
+        "SBI General"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "head.customercare@sbigeneral.in",
+        "gro@sbigeneral.in"
+      ],
+      "toll_free": [
+        "1800-102-1111"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [
+          "1800-102-1111"
+        ],
+        "email": "Seniorcitizengrievances@SBIGeneral.in"
+      },
+      "gro": {
+        "name": "Mr. Virag Mishra",
+        "email": "gro@sbigeneral.in",
+        "officer_email": "virag.mishra@sbigeneral.in",
+        "phone": "022-45138021 (Mon-Fri 9:30-6:30)",
+        "address": "9th floor, Wing A&B Fulcrum, Sahar Road, Andheri East, Mumbai 400 099"
+      },
+      "escalation": [],
+      "grievance_page_url": "https://www.sbigeneral.in/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": "Insurer page shows an old ombudsman email domain (ecoi.co.in); ignore it and use cioins.co.in.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.sbigeneral.in/grievance-redressal",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "indusindgeneral",
+      "name": "IndusInd General Insurance Co. Ltd.",
+      "aliases": [
+        "IndusInd General",
+        "Reliance General",
+        "Reliance General Insurance",
+        "RGICL"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "services@indusindinsurance.com"
+      ],
+      "toll_free": [],
+      "other_phones": [
+        {
+          "label": "Paid number",
+          "number": "+91-22-48903009"
+        },
+        {
+          "label": "Chat/WhatsApp",
+          "number": "7400422200"
+        }
+      ],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr Prasun Pratik",
+        "email": "legalclaimshelpdesk@indusindinsurance.com",
+        "officer_email": "PRASUN.PRATIK@indusindinsurance.com",
+        "phone": null,
+        "address": "6th floor, Oberoi Commerz, International Business Park, Oberoi Garden City, Off WE Highway, Goregaon East, Mumbai 400063"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "name": "Mr. Swaroop P, Chief Manager - ERCG",
+          "channel": "services@indusindinsurance.com"
+        },
+        {
+          "level": 2,
+          "name": "Mr. Vikash A., AVP - ERCG (Nodal Officer)",
+          "channel": "grievances@indusindinsurance.com"
+        },
+        {
+          "level": 3,
+          "name": "Head Grievances",
+          "channel": "headgrievances@indusindinsurance.com"
+        }
+      ],
+      "grievance_page_url": "https://reliancegeneral.co.in/Insurance/About-Us/Grievance-Redressal.aspx",
+      "online_grievance_form": null,
+      "notes": "Renamed from Reliance General. Page says call centre lines temporarily impacted; no toll-free listed. CIO 'GRO email' column shows legalclaimshelpdesk@ which looks like a claims-legal mailbox; prefer the insurer's own escalation ladder.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://reliancegeneral.co.in/Insurance/About-Us/Grievance-Redressal.aspx",
+          "fields": "all except gro",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "godigit",
+      "name": "Go Digit General Insurance Ltd.",
+      "aliases": [
+        "Digit",
+        "Go Digit",
+        "GoDigit"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "grievance@godigit.com",
+        "hello@godigit.com"
+      ],
+      "toll_free": [
+        "1800-258-4242 (health)",
+        "1800-258-5956 (motor)"
+      ],
+      "other_phones": [
+        {
+          "label": "WhatsApp chat only",
+          "number": "7026061234"
+        }
+      ],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr Praveen Bhat",
+        "email": "gro@godigit.com",
+        "officer_email": "praveen.bhat@godigit.com",
+        "phone": null,
+        "address": "Atlantis, 95, 4th B Cross Road, Koramangala Industrial Layout, 5th Block, Bengaluru 560 095"
+      },
+      "escalation": [
+        {
+          "level": 0,
+          "channel": "grievance@godigit.com (resolution within 14 days)"
+        },
+        {
+          "level": 1,
+          "name": "Mr. Praveen Bhat (GRO)",
+          "channel": "gro@godigit.com"
+        }
+      ],
+      "grievance_page_url": "https://www.godigit.com/claims/grievance-redressal-procedure",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.godigit.com/claims/grievance-redressal-procedure",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "generalicentral",
+      "name": "Generali Central Insurance Co. Ltd.",
+      "aliases": [
+        "Generali Central",
+        "Future Generali",
+        "Future Generali India Insurance"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "GCIcare@generalicentral.com"
+      ],
+      "toll_free": [],
+      "other_phones": [
+        {
+          "label": "Customer care (1860, not toll-free)",
+          "number": "1860-500-3333"
+        },
+        {
+          "label": "WhatsApp",
+          "number": "7678006000"
+        }
+      ],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr Hari Shankar Mishra",
+        "email": "gcigro@generalicentral.com",
+        "officer_email": "harishankar.mishra@generalicentral.com",
+        "phone": null,
+        "address": "Unit No. 801 & 802, 8th floor, Tower C, Embassy 247 Park, LBS Marg, Vikhroli West, Mumbai 400 083"
+      },
+      "escalation": [],
+      "grievance_page_url": null,
+      "online_grievance_form": null,
+      "notes": "Grievance page not reachable by fetch; customer care from homepage.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.generalicentral.com/",
+          "fields": "customer care email/number",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "iffcotokio",
+      "name": "IFFCO-Tokio General Insurance Co. Ltd.",
+      "aliases": [
+        "IFFCO Tokio",
+        "ITGI"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "support@iffcotokio.co.in"
+      ],
+      "toll_free": [
+        "1800-103-5499"
+      ],
+      "other_phones": [
+        {
+          "label": "WhatsApp",
+          "number": "7993407777"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "1800-103-5498"
+        ],
+        "email": "seniorcitizengrievance@iffcotokio.co.in"
+      },
+      "gro": {
+        "name": "Ms. Preeti Bali",
+        "email": "gro@iffcotokio.co.in",
+        "officer_email": "preeti@iffcotokio.co.in",
+        "phone": "0124-2850159",
+        "address": "IFFCO Tower, Plot No. 3, Sector 29, Gurugram 122001"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "name": "Ms. Preeti Bali, GRO / Chief Grievance Officer",
+          "channel": "chiefgrievanceofficer@iffcotokio.co.in"
+        }
+      ],
+      "grievance_page_url": "https://www.iffcotokio.co.in/customer-services/grievance-redressal",
+      "online_grievance_form": "https://sampark.itgi.co.in",
+      "notes": "Insurer's process page gives chiefgrievanceofficer@iffcotokio.co.in; CIO list gives gro@iffcotokio.co.in (officer email shown as 'preeti@iffcotoko.co.in', likely a typo on CIO page).",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.iffcotokio.co.in/customer-services/grievance-redressal",
+          "fields": "toll_free,senior_citizen,form",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.iffcotokio.co.in/contact-us/customer-services/grievance-redressal/grievance-redressal-process",
+          "fields": "escalation,gro phone",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "chola",
+      "name": "Cholamandalam MS General Insurance Co. Ltd.",
+      "aliases": [
+        "Chola MS",
+        "Chola",
+        "Cholamandalam"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "customercare@cholams.murugappa.com"
+      ],
+      "toll_free": [
+        "1800-208-5544"
+      ],
+      "other_phones": [
+        {
+          "label": "From abroad",
+          "number": "+91-44-61663400"
+        }
+      ],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Ms. K. Chitra",
+        "email": "gro@cholams.murugappa.com",
+        "officer_email": "chitrak@cholams.murugappa.com",
+        "phone": null,
+        "address": "Dare House, II Floor, No.2, N.S.C. Bose Road, Parrys, Chennai 600 001"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "name": "Mr. Jagadeesh V E, Customer Service Manager",
+          "channel": "jagadeeshv@cholams.murugappa.com"
+        },
+        {
+          "level": 2,
+          "name": "Mr. Anubhav Rajput, Chief Grievance Officer",
+          "channel": "GRO@cholams.murugappa.com"
+        }
+      ],
+      "grievance_page_url": "https://www.cholainsurance.com/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": "GRO name differs: insurer page Mr. Anubhav Rajput; CIO list Ms. K. Chitra. Postal: Manager, Grievance Cell, Hari Nivas Towers First Floor, #163, Thambu Chetty Street, Parry's Corner, Chennai 600 001.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.cholainsurance.com/grievance-redressal",
+          "fields": "all except CIO",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "zurichkotak",
+      "name": "Zurich Kotak General Insurance Co. (India) Ltd.",
+      "aliases": [
+        "Zurich Kotak",
+        "Kotak General",
+        "Kotak Mahindra General"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "care@zurichkotak.com"
+      ],
+      "toll_free": [],
+      "other_phones": [
+        {
+          "label": "Toll number (India/overseas)",
+          "number": "+91-22-69417220"
+        },
+        {
+          "label": "WhatsApp chat only",
+          "number": "7998879988"
+        }
+      ],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr Rahul Wadhwa",
+        "email": "grievanceofficer@kotak.com",
+        "officer_email": "rahul.wadhwa@kotak.com",
+        "phone": null,
+        "address": "8th floor, Zone IV, Kotak Towers, Building No. 21, Infinity Park, Off Western Express Highway, Malad (East), Mumbai 400097"
+      },
+      "escalation": [],
+      "grievance_page_url": "https://www.zurichkotak.com/customer-support/grievance-redressal-process",
+      "online_grievance_form": null,
+      "notes": "Page displays toll-free '1800 2120' but its dial link is 18002664545; not recorded until verified. CIO still lists Kotak domain emails under old name.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.zurichkotak.com/customer-support",
+          "fields": "care email, toll number, WhatsApp",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "royalsundaram",
+      "name": "Royal Sundaram General Insurance Co. Ltd.",
+      "aliases": [
+        "Royal Sundaram"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "care@royalsundaram.in"
+      ],
+      "toll_free": [],
+      "other_phones": [
+        {
+          "label": "Customer services (1860)",
+          "number": "1860-258-0000"
+        },
+        {
+          "label": "Customer services (1860)",
+          "number": "1860-425-0000"
+        }
+      ],
+      "senior_citizen": {
+        "phones": [
+          "9500413019"
+        ],
+        "email": "seniorcitizengrievances@royalsundaram.in"
+      },
+      "gro": {
+        "name": "Mr T M Shyamsunder",
+        "email": "GRO@royalsundaram.in",
+        "officer_email": "TM.Shyamsunder@royalsundaram.in",
+        "phone": "9500413094",
+        "address": "Vishranti Melaram Towers, No. 2/319, Rajiv Gandhi Salai (OMR), Karapakkam, Chennai 600097"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "manager.care@royalsundaram.in"
+        },
+        {
+          "level": 2,
+          "channel": "head.cs@royalsundaram.in"
+        },
+        {
+          "level": 3,
+          "name": "Mr. T M Shyamsunder (GRO)",
+          "channel": "gro@royalsundaram.in"
+        }
+      ],
+      "grievance_page_url": "https://www.royalsundaram.in/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": "Senior citizen email printed on page but its link points to care@royalsundaram.in.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.royalsundaram.in/grievance-redressal",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "universalsompo",
+      "name": "Universal Sompo General Insurance Co. Ltd.",
+      "aliases": [
+        "Universal Sompo"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "contactus@universalsompo.com"
+      ],
+      "toll_free": [
+        "1800-200-4030",
+        "1800-22-4030"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [
+          "1800-267-4030"
+        ],
+        "email": "seniorcitizen@universalsompo.com"
+      },
+      "gro": {
+        "name": "Ms. Namita Singh",
+        "email": "gro@universalsompo.com",
+        "officer_email": "namita.singh@universalsompo.com",
+        "phone": null,
+        "address": "Unit no. 601 & 602, 6th Floor, Reliable Tech Park, Thane-Belapur Road, Navi Mumbai 400708"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "1800-200-4030"
+        },
+        {
+          "level": 2,
+          "name": "Ms. Namita Singh (GRO)",
+          "channel": "gro@universalsompo.com"
+        }
+      ],
+      "grievance_page_url": "https://www.universalsompo.com/resourse-grievance-redressal/",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.universalsompo.com/resourse-grievance-redressal/",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "liberty",
+      "name": "Liberty General Insurance Ltd.",
+      "aliases": [
+        "Liberty General",
+        "Liberty Videocon"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "care@libertyinsurance.in"
+      ],
+      "toll_free": [
+        "1800-266-5844"
+      ],
+      "other_phones": [],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr Sachin Joshi",
+        "email": "gro@libertyinsurance.in",
+        "officer_email": "sachin.joshi@libertyinsurance.in",
+        "phone": null,
+        "address": "Ground Floor, High Street cum Highlighted Corporate Centre, Bearing No. GB-1B, Kapurbawdi Junction, Majwada, Thane 400607"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "Manager@libertyinsurance.in"
+        },
+        {
+          "level": 2,
+          "channel": "ServiceHead@libertyinsurance.in"
+        },
+        {
+          "level": 3,
+          "channel": "Branch GRO (poster PDF)"
+        },
+        {
+          "level": 4,
+          "name": "Mr. Sachin Joshi (Chief GRO)",
+          "channel": "gro@libertyinsurance.in"
+        }
+      ],
+      "grievance_page_url": "https://www.libertyinsurance.in/customer-support/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.libertyinsurance.in/customer-support/grievance-redressal",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "magma",
+      "name": "Magma General Insurance Ltd.",
+      "aliases": [
+        "Magma",
+        "Magma HDI"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "customercare@magmainsurance.com"
+      ],
+      "toll_free": [
+        "1800-266-3202"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [
+          "022-62605766"
+        ],
+        "email": "namaskar@magmainsurance.com"
+      },
+      "gro": {
+        "name": "Ms. Falguni Vaza",
+        "email": "gro@magmainsurance.com",
+        "officer_email": "falguni.vaza@magmainsurance.com",
+        "phone": null,
+        "address": "Equinox Business Park, Tower 3, 2nd floor, Unit No. 1B & 2B, LBS Marg, Kurla West, Mumbai 400 070"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "Branch GRO (list: https://www.magmainsurance.com/documents/d/magmainsurance/branch-grievance-officer-list)"
+        },
+        {
+          "level": 2,
+          "name": "Ms. Falguni Vaza (Chief GRO)",
+          "channel": "gro@magmainsurance.com"
+        }
+      ],
+      "grievance_page_url": "https://www.magmainsurance.com/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.magmainsurance.com/grievance-redressal",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "shriram",
+      "name": "Shriram General Insurance Co. Ltd.",
+      "aliases": [
+        "Shriram General"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "gro@shriramgi.com"
+      ],
+      "toll_free": [
+        "1800-300-30000",
+        "1800-103-3009"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [],
+        "email": "seniorcitizen@shriramgi.com"
+      },
+      "gro": {
+        "name": "Ms. Tanushree Jain",
+        "email": "gro@shriramgi.com",
+        "officer_email": "tanushree.jain@shriramgi.com",
+        "phone": null,
+        "address": "E-8, EPIP, RIICO Industrial Area, Sitapura, Jaipur 302 022"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "gro@shriramgi.com / branch GRO"
+        },
+        {
+          "level": 2,
+          "name": "Ms. Tanushree Jain (Chief GRO)",
+          "channel": "md@shriramgi.com"
+        }
+      ],
+      "grievance_page_url": "https://www.shriramgi.com/grievance-redressal-mechanism",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.shriramgi.com/grievance-redressal-mechanism",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "acko",
+      "name": "Acko General Insurance Ltd.",
+      "aliases": [
+        "Acko"
+      ],
+      "type": "private_general",
+      "grievance_emails": [],
+      "toll_free": [
+        "1800-210-4990 (grievance desk, 10am-7pm)"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [
+          "080-35239362"
+        ],
+        "email": null
+      },
+      "gro": {
+        "name": "Mr. Kaustubh Singh",
+        "email": "gro@acko.com",
+        "officer_email": "kaustubh.singh@acko.com",
+        "phone": null,
+        "address": "36/5, Hustlehub One East, Somasandrapalya, 27th Main Road, Sector 2, HSR Layout, Bengaluru 560 102"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "Grievance desk 1800-210-4990 (email obfuscated on page)"
+        },
+        {
+          "level": 2,
+          "name": "Mr. Kaustubh Singh (GRO)",
+          "channel": "gro@acko.com (from CIO list)"
+        }
+      ],
+      "grievance_page_url": "https://www.acko.com/grievance-redressal/",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.acko.com/grievance-redressal/",
+          "fields": "toll_free,senior_citizen,escalation",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "navi",
+      "name": "Navi General Insurance Ltd.",
+      "aliases": [
+        "Navi",
+        "Navi General",
+        "Navi Insurance"
+      ],
+      "type": "private_general",
+      "grievance_emails": [],
+      "toll_free": [],
+      "other_phones": [],
+      "senior_citizen": null,
+      "gro": {
+        "name": "Mr. Koushik Sangiri",
+        "email": "gro@navi.com",
+        "officer_email": "koushik.sangiri@navi.com",
+        "phone": null,
+        "address": "Vaishnavi Tech Square, No. 142/2 Iballur Village, Taluka Bagalur, Begur, Bengaluru 560102"
+      },
+      "escalation": [],
+      "grievance_page_url": null,
+      "online_grievance_form": null,
+      "notes": "navi.com blocks automated fetching; only CIO data verified.",
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "rahejaqbe",
+      "name": "Raheja QBE General Insurance Co. Ltd.",
+      "aliases": [
+        "Raheja QBE"
+      ],
+      "type": "private_general",
+      "grievance_emails": [
+        "customercare@rahejaqbe.com"
+      ],
+      "toll_free": [
+        "1800-102-7723"
+      ],
+      "other_phones": [],
+      "senior_citizen": {
+        "phones": [
+          "+91-22-69155051"
+        ],
+        "email": "seniorcitizencare@rahejaqbe.com"
+      },
+      "gro": {
+        "name": "Ms Mrunal Fernandes",
+        "email": "grievancehead@rahejaqbe.com",
+        "officer_email": "mrunal.fernandes@rahejaqbe.com",
+        "phone": null,
+        "address": "Ground floor, P&G Plaza, Cardinal Gracious Road, Chakala, Andheri East, Mumbai 400099"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "channel": "customercare@rahejaqbe.com"
+        },
+        {
+          "level": 2,
+          "name": "GRO",
+          "channel": "complaintsofficer@rahejaqbe.com"
+        },
+        {
+          "level": 3,
+          "name": "Head Grievances",
+          "channel": "grievancehead@rahejaqbe.com"
+        }
+      ],
+      "grievance_page_url": "https://www.rahejaqbe.com/grievance-redressal",
+      "online_grievance_form": null,
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://cioins.co.in/GRONonLife",
+          "fields": "gro.*",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.rahejaqbe.com/grievance-redressal",
+          "fields": "all",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    }
+  ]
+}

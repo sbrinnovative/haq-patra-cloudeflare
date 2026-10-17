@@ -1,0 +1,1245 @@
+{
+  "dataset": "Bank grievance contacts and Principal Nodal Officers",
+  "checked": "2026-10-16",
+  "notes": [
+    "Most banks moved to the .bank.in domain; several still publish emails on old domains (e.g. @indusind.com, @icicibank.com, @federalbank.co.in, @ktkbank.com, @aubank.in). Recorded exactly as published.",
+    "null = not verifiable from an official page on the check date. Nothing was filled from third-party sites.",
+    "1860 numbers are shared-cost, not toll-free."
+  ],
+  "banks": [
+    {
+      "id": "sbi",
+      "name": "State Bank of India",
+      "aliases": [
+        "SBI"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 1234",
+        "1800 2100",
+        "1800 11 2211",
+        "1800 425 3800"
+      ],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": "Principal Nodal Officer (name not shown)",
+        "email": "gm.customer@sbi.co.in",
+        "phone": "022-22741216",
+        "address": null
+      },
+      "escalation": [
+        {
+          "channel": "Unauthorised electronic transactions",
+          "value": "1800 11 1109 / 94491 12211"
+        },
+        {
+          "channel": "SMS UNHAPPY",
+          "value": "8008 20 20 20"
+        }
+      ],
+      "notes": "Circle-level nodal officers listed in a table on the same page. Online complaint portal URL not verified.",
+      "sources": [
+        {
+          "url": "https://sbi.bank.in/web/customer-care/contact-us/",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "hdfc",
+      "name": "HDFC Bank Ltd.",
+      "aliases": [
+        "HDFC Bank",
+        "HDFC"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [],
+      "complaint_portal_url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [],
+      "notes": "Grievance page is JS-rendered; PNO and phone numbers could not be read from the official page. Needs manual check in a browser.",
+      "sources": [
+        {
+          "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "icici",
+      "name": "ICICI Bank Ltd.",
+      "aliases": [
+        "ICICI",
+        "ICICI Bank"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800 1080"
+      ],
+      "complaint_portal_url": "https://www.icici.bank.in/complaint",
+      "principal_nodal_officer": {
+        "name": "Ms. Sharlet Malvankar",
+        "designation": "Principal Nodal Officer",
+        "email": "pno@icicibank.com",
+        "phone": "+91-22-39337979",
+        "address": "ICICI Bank Ltd, Bandra Kurla Complex, Mumbai 400051"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "name": "Ms. Bhawna Dutta, Head - Phone Banking"
+        },
+        {
+          "level": 2,
+          "name": "Head, Customer Service Quality"
+        },
+        {
+          "level": 3,
+          "name": "Ms. Sharlet Malvankar, PNO"
+        }
+      ],
+      "notes": "Online complaint form: https://nli.icici.bank.in/NewRetailWeb/complaint.htm. PNO contact details appear on the digital-lending grievance page.",
+      "sources": [
+        {
+          "url": "https://www.icici.bank.in/personal-banking/loans/cardless-emi/grievance-redressal",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://nli.icici.bank.in/NewRetailWeb/complaint.htm",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "axis",
+      "name": "Axis Bank Ltd.",
+      "aliases": [
+        "Axis",
+        "Axis Bank"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": "Ms. Deepti Radkar",
+        "designation": "Principal Nodal Officer",
+        "email": null,
+        "phone": "08061865098",
+        "address": "Axis Bank Limited, NPC1, 5th Floor, Gigaplex, Plot No I.T.5, MIDC, Airoli Knowledge Park, Airoli, Navi Mumbai - 400708"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "name": "Mr. Jagdish Panjumal Raikhanghar, GRO",
+          "phone": "08061865200"
+        }
+      ],
+      "notes": "Emails are shown as images on the page and could not be read.",
+      "sources": [
+        {
+          "url": "https://application.axis.bank.in/Webforms/axis-support/GRODetails.aspx",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "kotak",
+      "name": "Kotak Mahindra Bank Ltd.",
+      "aliases": [
+        "Kotak",
+        "Kotak Bank"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800 4100"
+      ],
+      "complaint_portal_url": "https://www.kotak.bank.in/en/customer-service/grievance-redressal.html",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [
+        {
+          "channel": "Fraud reporting 24x7",
+          "value": "1800 209 0000"
+        },
+        {
+          "channel": "Report fraud / raise dispute",
+          "value": "https://kapps.kotak.bank.in/FraudPreLogin"
+        },
+        {
+          "channel": "Postal",
+          "value": "Kotak Mahindra Bank Ltd., P.O. Box 16344, Mumbai-400013"
+        }
+      ],
+      "notes": "No officer labelled 'Principal Nodal Officer' found. Banking-ombudsman page lists Mr. Milind Shirke, Compliance / Nodal Officer for handling of notices, statutory.notices@kotak.com, 022-62980438-40 (notices, not customer complaints). Level 3 email is Cloudflare-obfuscated.",
+      "sources": [
+        {
+          "url": "https://www.kotak.bank.in/en/customer-service/contact-us.html",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.kotak.bank.in/en/customer-service/important-customer-information/banking-ombudsman.html",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.kotak.bank.in/en/customer-service/grievance-redressal/personal-banking/level-3.html",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "pnb",
+      "name": "Punjab National Bank",
+      "aliases": [
+        "PNB"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 1800",
+        "1800 2021"
+      ],
+      "complaint_portal_url": "https://pnb.bank.in/CcsrmsFormComplaint.aspx",
+      "principal_nodal_officer": {
+        "name": "Sh. Ashutosh Kumar Jha",
+        "designation": "General Manager, Customer Care Centre",
+        "email": "pno@pnb.bank.in",
+        "phone": "+91-124-4126244",
+        "address": "Plot No. 5, Institutional Area, Sector-32, Gurugram (Haryana) - 122001"
+      },
+      "escalation": [
+        {
+          "channel": "Customer care email",
+          "value": "care@pnb.bank.in"
+        },
+        {
+          "channel": "Track complaint",
+          "value": "https://pnb.bank.in/ccsrms-status-complaint_CRM.aspx"
+        },
+        {
+          "channel": "SMS",
+          "value": "COMPLAINT to 5607040"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://pnb.bank.in/Lodge-Complaint.html",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "bob",
+      "name": "Bank of Baroda",
+      "aliases": [
+        "BoB",
+        "Baroda"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [],
+      "complaint_portal_url": "https://bobcrm.bankofbaroda.bank.in/onlinecomplaint/",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [],
+      "notes": "Page lists zonal nodal officers (e.g. Ahmedabad: Mr. Ranjit Ranjan Das, DGM, dgm.ngz@bankofbaroda.bank.in, 079-26473251) but no PNO. Toll-free not verified.",
+      "sources": [
+        {
+          "url": "https://bankofbaroda.bank.in/contact-us/nodal-officer-of-our-bank-for-banking-ombudsman-scheme-2006",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "canara",
+      "name": "Canara Bank",
+      "aliases": [
+        "Canara"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 1030"
+      ],
+      "complaint_portal_url": "https://canarites.canarabank.bank.in/GRSCRM",
+      "principal_nodal_officer": {
+        "name": "Sri T. K. Venugopal",
+        "designation": "Chief General Manager & Nodal Grievance Officer",
+        "email": null,
+        "phone": "080-22239011",
+        "address": "Customer Service Vertical, Operations Wing, Canara Bank Head Office, 112, JC Road, Bengaluru - 560002"
+      },
+      "escalation": [
+        {
+          "name": "Shri S. K. Majumdar, Executive Director (Sub Appellate Authority)"
+        }
+      ],
+      "notes": "Page title is 'Nodal Grievance Officer', not 'Principal Nodal Officer'. No email published.",
+      "sources": [
+        {
+          "url": "https://www.canarabank.bank.in/details-of-nodal-grievance-officer-sub-appellate-authority",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "union",
+      "name": "Union Bank of India",
+      "aliases": [
+        "Union Bank",
+        "UBI"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800-2333",
+        "1800 208 2244",
+        "1800 425 1515",
+        "1800 425 3555",
+        "1800 22 22 44"
+      ],
+      "complaint_portal_url": "https://service.unionbankportal.bank.in/portal/en/signin",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [
+        {
+          "channel": "Email",
+          "value": "customercare@unionbankofindia.bank.in"
+        },
+        {
+          "channel": "Fraud/disputed transactions",
+          "value": "1800 2222 43"
+        },
+        {
+          "channel": "Unauthorised transactions",
+          "value": "https://unauthdigitxn.unionbankportal.bank.in/portal/en/newticket"
+        }
+      ],
+      "notes": "PNO is in a tab that did not render in fetch.",
+      "sources": [
+        {
+          "url": "https://www.unionbankofindia.bank.in/en/common/grievance-redressal",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "boi",
+      "name": "Bank of India",
+      "aliases": [
+        "BOI"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 220 229",
+        "1800 103 1906"
+      ],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [],
+      "notes": "Grievance and PNO pages not found/readable.",
+      "sources": [
+        {
+          "url": "https://bankofindia.bank.in/",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "indianbank",
+      "name": "Indian Bank",
+      "aliases": [
+        "Indian Bank",
+        "Allahabad Bank (merged)"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 1700"
+      ],
+      "complaint_portal_url": "https://apps.indianbank.bank.in/cgrc/frm_cgrs_cust_welcome_new_UA1.aspx",
+      "principal_nodal_officer": {
+        "name": "Shri. Amit Chaudhari",
+        "designation": "General Manager (KYC/AML/CSCE)",
+        "email": "nodalofficer@indianbank.bank.in",
+        "phone": "044-25279970",
+        "address": "Indian Bank, Head Office, No.66, Rajaji Salai, Chennai - 600001"
+      },
+      "escalation": [],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://indianbank.bank.in/en/nodal-officers-customer-service",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "central",
+      "name": "Central Bank of India",
+      "aliases": [
+        "Central Bank",
+        "CBI"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 30 30"
+      ],
+      "complaint_portal_url": "https://icc.centralbank.bank.in/cucms_cboi/docket/srbooking/srbooking/",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [],
+      "notes": "PNO not found on the page read.",
+      "sources": [
+        {
+          "url": "https://www.centralbank.bank.in/en/node/223462",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "idbi",
+      "name": "IDBI Bank Ltd.",
+      "aliases": [
+        "IDBI"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800-209-4324",
+        "1800-22-1070"
+      ],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": "Shri Sharath Kumar Kamath",
+        "designation": "Chief General Manager & PNO",
+        "email": "pno@idbi.co.in",
+        "phone": null,
+        "address": "IDBI Bank Ltd. Customer Care Centre, 19th Floor, D Wing, IDBI Tower, WTC Complex, Cuffe Parade, Mumbai - 400 005"
+      },
+      "escalation": [],
+      "notes": "pno@idbi.co.in appears on the page under the line-functioning heads section, not beside the PNO's name. Hours 10-6 Mon-Sat except 2nd/4th Sat.",
+      "sources": [
+        {
+          "url": "https://www.idbi.bank.in/banking-complaints-I.aspx",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "yes",
+      "name": "YES Bank Ltd.",
+      "aliases": [
+        "Yes Bank"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [],
+      "notes": "Official pages are JS-only; nothing verified.",
+      "sources": [],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "indusind",
+      "name": "IndusInd Bank Ltd.",
+      "aliases": [
+        "IndusInd"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1860 267 7777 (shared cost)",
+        "1800 266 0447 (complaint registration)"
+      ],
+      "complaint_portal_url": "https://www.indusind.bank.in/in/en/personal/grievance-redressal.html",
+      "principal_nodal_officer": {
+        "name": "Ms. D. Sidhwa",
+        "designation": "Executive Vice President & Principal Nodal Officer",
+        "email": "pno@indusind.com",
+        "phone": "022-61553705",
+        "address": "IndusInd Bank Ltd, OPUS Center, 47, Central Road, Opp. Tunga Paradise Hotel MIDC, Andheri (East), Mumbai 400093"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "email": "reachus@indusind.com"
+        },
+        {
+          "level": 2,
+          "name": "Mr. A Sharma, SVP, Nodal Officer",
+          "email": "nodal.officer@indusind.com"
+        },
+        {
+          "level": 3,
+          "email": "pno@indusind.com"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.indusind.bank.in/content/dam/regulatoryDisclosure/grievanceRedressal/grievance-redressal-mechanism.pdf",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "idfcfirst",
+      "name": "IDFC FIRST Bank Ltd.",
+      "aliases": [
+        "IDFC First",
+        "IDFC"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800 10 888"
+      ],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": "Mr. Vipul Raj",
+        "designation": "Principal Nodal Officer",
+        "email": "pno@idfcfirstbank.com",
+        "phone": "1800 209 9771",
+        "address": "IDFC FIRST Bank, Building no. 09, 17th floor, Gigaplex Raheja Mindspace IT-5, Airoli, Navi Mumbai - 400708"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "email": "banker@idfcfirstbank.com"
+        },
+        {
+          "level": 2,
+          "name": "Regional Nodal Officer",
+          "email": "rno@idfcfirstbank.com",
+          "phone": "022-41652700"
+        },
+        {
+          "level": 3,
+          "email": "pno@idfcfirstbank.com"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/grievance-redressal/List-of-escalation-matrix-with-TAT-v2-2.pdf",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "federal",
+      "name": "The Federal Bank Ltd.",
+      "aliases": [
+        "Federal Bank"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800-425-1199",
+        "1800-420-1199"
+      ],
+      "complaint_portal_url": "https://grievance-redressal.cloud.federal.bank.in/ords/r/grievance/grievance-redressal/g1r",
+      "principal_nodal_officer": {
+        "name": "Biju K",
+        "designation": "Executive Vice President - Principal Nodal Officer",
+        "email": "support@federalbank.co.in",
+        "phone": "0484-2866521",
+        "address": "The Federal Bank Ltd., Federal Towers, Aluva, Ernakulam, Kerala 683101"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "email": "contact@federalbank.co.in"
+        },
+        {
+          "level": 2,
+          "name": "Nikhil A, AVP - Nodal Officer",
+          "email": "grievanceescalations@federalbank.co.in",
+          "phone": "0484-2866511"
+        },
+        {
+          "level": 3,
+          "email": "support@federalbank.co.in",
+          "form": "https://grievance-redressal.cloud.federal.bank.in/ords/r/grievance/grievance-redressal/g3r"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.federal.bank.in/grievance-redressal-general-banking",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "uco",
+      "name": "UCO Bank",
+      "aliases": [
+        "UCO"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 8910"
+      ],
+      "complaint_portal_url": "https://customerservice.ucoonline.bank.in/CustFeedback/home.jsp",
+      "principal_nodal_officer": {
+        "name": "Shri Saroj Ranjan Nayak",
+        "designation": "General Manager, Operations and Services Department",
+        "email": "hosp.cscell@ucobank.co.in",
+        "phone": "033-44557131 / 033-44557109",
+        "address": "India Exchange Place, 1st Floor, Head Office, Kolkata-700001"
+      },
+      "escalation": [],
+      "notes": "Page prints PIN as 7000001 (typo).",
+      "sources": [
+        {
+          "url": "https://uco.bank.in/grievance-redressal-officer",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "iob",
+      "name": "Indian Overseas Bank",
+      "aliases": [
+        "IOB"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800 890 4445",
+        "1800 425 4445"
+      ],
+      "complaint_portal_url": "https://spgrs.iob.bank.in/comp",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": null,
+        "email": null,
+        "phone": null,
+        "address": null
+      },
+      "escalation": [],
+      "notes": "PNO not found in readable content.",
+      "sources": [
+        {
+          "url": "https://www.iob.bank.in/Grievances-Redressal-mechanism",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.iob.bank.in/Reach-us",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "bom",
+      "name": "Bank of Maharashtra",
+      "aliases": [
+        "Mahabank",
+        "BoM"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [],
+      "complaint_portal_url": "https://bankofmaharashtra.bank.in/spgrs/index.html?source=w",
+      "principal_nodal_officer": {
+        "name": "Shri Shirish Salway",
+        "designation": "General Manager, Transaction Monitoring Department (Principal Code Compliance Officer / Chief Nodal Officer / Chief Grievances Officer)",
+        "email": "pstogmtmd@bankofmaharashtra.bank.in",
+        "phone": "020-24504230",
+        "address": "4th Floor, Janmangal Building, 1177 Budhwar Peth, Pune-411002"
+      },
+      "escalation": [
+        {
+          "name": "Shilpa Shinde, AGM, Customer Services and Grievances Redressal Cell (HO nodal officer)",
+          "email": "hocomplaints@bankofmaharashtra.bank.in",
+          "phone": "020-24504183"
+        },
+        {
+          "channel": "ODR",
+          "value": "https://odr.bankofmaharashtra.bank.in/odr/customer-login"
+        }
+      ],
+      "notes": "Page layout ambiguous about which officer is the PNO. Toll-free 1800 233 4526 appears only in site metadata (not verified).",
+      "sources": [
+        {
+          "url": "https://bankofmaharashtra.bank.in/nodal-officers-for-public-grievances-at-head-office",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/complaints-grievances",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "psb",
+      "name": "Punjab & Sind Bank",
+      "aliases": [
+        "PSB",
+        "Punjab and Sind"
+      ],
+      "type": "public_sector",
+      "status": "active",
+      "customer_care": [
+        "1800-419-8300"
+      ],
+      "complaint_portal_url": "https://marketing.psb.bank.in/complaint-lodge-grievence/",
+      "principal_nodal_officer": {
+        "name": "Sh. Bontha Koteswara Rao",
+        "designation": "General Manager",
+        "email": "PNO@psb.bank.in",
+        "phone": "011-25726359",
+        "address": "6th Floor, 21, Rajendra Place, New Delhi 110008"
+      },
+      "escalation": [
+        {
+          "name": "Smt. Rajni Saini, Chief Manager, Nodal Officer HO",
+          "email": "ho.complaint@psb.bank.in",
+          "phone": "011-25723872"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.punjabandsind.bank.in/content/recomp",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "au",
+      "name": "AU Small Finance Bank Ltd.",
+      "aliases": [
+        "AU Bank",
+        "AU SFB"
+      ],
+      "type": "small_finance",
+      "status": "active",
+      "customer_care": [
+        "1800 1200 1200"
+      ],
+      "complaint_portal_url": "https://www.au.bank.in/support/contact-us/raise-complaint",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": "Principal Nodal Officer",
+        "email": "pno@aubank.in",
+        "phone": null,
+        "address": "AU Small Finance Bank Ltd., Jagatpura, Jaipur - 302022"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "email": "customercare@aubank.in"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.au.bank.in/support/contact-us/raise-complaint",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "bandhan",
+      "name": "Bandhan Bank Ltd.",
+      "aliases": [
+        "Bandhan"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800-258-8181"
+      ],
+      "complaint_portal_url": "https://www.bandhan.bank.in/grievance-redressal",
+      "principal_nodal_officer": {
+        "name": "Ms. Radhika Raghavan",
+        "designation": "Head - Customer Experience, Process Quality & Transformation",
+        "email": "pno@bandhanbank.com",
+        "phone": "033-6826-5301",
+        "address": "2nd Floor, 201-209, A Wing, INS Tower, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai - 400051"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "email": "customercare@bandhanbank.com"
+        },
+        {
+          "level": 2,
+          "name": "Mr. Ketan Kishor Keni",
+          "email": "grievanceredressalmanager@bandhanbank.com",
+          "phone": "033-6826-5302"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.bandhan.bank.in/grievance-redressal",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "rbl",
+      "name": "RBL Bank Ltd.",
+      "aliases": [
+        "RBL"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "+91 22 6232 7777 (not toll-free)"
+      ],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": "Mr. Vikas Nigam",
+        "designation": "Principal Nodal Officer",
+        "email": "principalnodalofficer@rbl.bank.in",
+        "phone": "022-71432700",
+        "address": "RBL Bank Ltd, One World Centre, Tower 2B, 9th Floor, 841, Senapati Bapat Marg, Lower Parel West, Mumbai - 400013"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "email": "customercare@rbl.bank.in"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://webassets.rbl.bank.in/document/notices/grievance-redressal-escalation-matrix.pdf",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "sib",
+      "name": "South Indian Bank Ltd.",
+      "aliases": [
+        "SIB"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800-425-1809",
+        "1800-102-9408"
+      ],
+      "complaint_portal_url": "https://www.southindianbank.bank.in/help-desk/complaint-registration",
+      "principal_nodal_officer": {
+        "name": "Mr Anto George T",
+        "designation": "Executive Vice President & Chief Operating Officer",
+        "email": null,
+        "phone": null,
+        "address": "South Indian Bank Ltd., Head Office, T.B Road, Mission Quarters, Thrissur 680 001, Kerala"
+      },
+      "escalation": [
+        {
+          "level": 2,
+          "name": "Mr Shine Kappen, AGM, Customer Relations",
+          "form": "https://www.southindianbank.bank.in/help-desk/complaint-registration/stage2/2"
+        },
+        {
+          "level": 3,
+          "form": "https://www.southindianbank.bank.in/help-desk/complaint-registration/stage2/3"
+        }
+      ],
+      "notes": "Escalation is by web form; PNO email is in a linked PDF not read.",
+      "sources": [
+        {
+          "url": "https://www.southindianbank.bank.in/help-desk/complaint-registration",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "kvb",
+      "name": "Karur Vysya Bank Ltd.",
+      "aliases": [
+        "KVB"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800 572 1916 (unauthorised transactions)",
+        "1860 258 1916 (general, shared cost)"
+      ],
+      "complaint_portal_url": "https://www.kvb.bank.in/customer-service/feedback-form/",
+      "principal_nodal_officer": {
+        "name": null,
+        "designation": "Principal Nodal Officer",
+        "email": "pno@kvb.bank.in",
+        "phone": null,
+        "address": "Customer Grievance Cell, Operations Department, Central Office, Erode Road, Karur-639002"
+      },
+      "escalation": [
+        {
+          "level": 1,
+          "email": "customersupport@kvb.bank.in"
+        },
+        {
+          "level": 2,
+          "email": "customergrievancemanager@kvb.bank.in"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.kvb.bank.in/feedback-form-escalation/",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "cub",
+      "name": "City Union Bank Ltd.",
+      "aliases": [
+        "CUB"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [
+        "1800 120 5000"
+      ],
+      "complaint_portal_url": "https://ccm.cub.bank.in",
+      "principal_nodal_officer": {
+        "name": "Shri. G. SathishKumar",
+        "designation": "General Manager - Customer Experience",
+        "email": "principalofficer@cityunionbank.in",
+        "phone": "044-71225050",
+        "address": "City Union Bank Ltd., No. 248, Gandhi Nagar, Kumbakonam - 612001"
+      },
+      "escalation": [
+        {
+          "level": 2,
+          "email": "complaints_grievances@cityunionbank.in",
+          "phone": "0435-2402322"
+        }
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://www.cityunionbank.bank.in/grievance",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "jkbank",
+      "name": "The Jammu & Kashmir Bank Ltd.",
+      "aliases": [
+        "J&K Bank",
+        "JK Bank"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": "Mr. Tariq Ali",
+        "designation": "General Manager",
+        "email": "tariq.ali@jkbmail.com",
+        "phone": "0194-2481930",
+        "address": "Office of the General Manager, Corporate Headquarters Srinagar"
+      },
+      "escalation": [],
+      "notes": "Source is a PDF dated August 2025 (from its file name); likely stale. Recheck.",
+      "sources": [
+        {
+          "url": "https://jkbank.com/sites/default/files/2025-08/Address%20of%20Nodal%20Officers%20of%20the%20Bank%20August%202025.pdf",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "ktkbank",
+      "name": "Karnataka Bank Ltd.",
+      "aliases": [
+        "Karnataka Bank",
+        "KBL"
+      ],
+      "type": "private",
+      "status": "active",
+      "customer_care": [],
+      "complaint_portal_url": "https://karnatakabank.com/etms/complaint.php",
+      "principal_nodal_officer": {
+        "name": "Shri Jayanagaraja Rao S",
+        "designation": "Principal Nodal Officer & General Manager",
+        "email": "jayanagarajas@ktkbank.com",
+        "phone": "0824-2228275",
+        "address": "Karnataka Bank Head Office, Mahaveera Circle, Kankanady, Mangaluru 575 002"
+      },
+      "escalation": [],
+      "notes": "Complaint portal URL from search listing of the official domain; not opened.",
+      "sources": [
+        {
+          "url": "https://karnatakabank.com/complaints",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "airtelpb",
+      "name": "Airtel Payments Bank Ltd.",
+      "aliases": [
+        "Airtel Payments Bank",
+        "APB"
+      ],
+      "type": "payments_bank",
+      "status": "active",
+      "customer_care": [
+        "1800 23400"
+      ],
+      "complaint_portal_url": "https://www.airtelpayments.bank.in/help-and-support",
+      "principal_nodal_officer": {
+        "name": "Gunpreet Taneja",
+        "designation": "DVP, Principal Nodal Officer",
+        "email": null,
+        "phone": "0124-4247797",
+        "address": "Airtel Payments Bank Ltd., 5th Floor, Sewa Towers, Udyog Vihar Phase IV, Gurgaon 122015"
+      },
+      "escalation": [
+        {
+          "level": 2,
+          "name": "Tanuj Jain, Nodal Officer"
+        },
+        {
+          "channel": "Report fraud",
+          "value": "1800 203 3330"
+        }
+      ],
+      "notes": "Emails Cloudflare-obfuscated.",
+      "sources": [
+        {
+          "url": "https://www.airtelpayments.bank.in/static/contact-us",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "ippb",
+      "name": "India Post Payments Bank Ltd.",
+      "aliases": [
+        "IPPB"
+      ],
+      "type": "payments_bank",
+      "status": "active",
+      "customer_care": [
+        "155299",
+        "033-22029000 (paid)",
+        "1800 8899 860 (unauthorised transactions / card block)"
+      ],
+      "complaint_portal_url": "https://ippbonline.bank.in/web/ippb/complaint-management",
+      "principal_nodal_officer": {
+        "name": "Ms. Lavanya K Arumugam",
+        "designation": "General Manager - Operations (Tier-3 Grievances Redressal Officer)",
+        "email": "pno@ippbonline.in",
+        "phone": "011-23485700",
+        "address": "Corporate Office, Speed Post Centre, Bhai Veer Singh Marg, New Delhi-110 001"
+      },
+      "escalation": [],
+      "notes": null,
+      "sources": [
+        {
+          "url": "https://ippbonline.bank.in/web/ippb/feedback",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "paytmpb",
+      "name": "Paytm Payments Bank Ltd.",
+      "aliases": [
+        "Paytm Payments Bank",
+        "PPBL"
+      ],
+      "type": "payments_bank",
+      "status": "in_liquidation",
+      "customer_care": [],
+      "complaint_portal_url": null,
+      "principal_nodal_officer": {
+        "name": "Shri Sumit Bajaj",
+        "designation": "Principal Nodal Officer (pre-liquidation)",
+        "email": "nodalofficer@paytmbank.com",
+        "phone": "0120-4809661",
+        "address": "B-121, Sector 5, Noida, Uttar Pradesh-201301"
+      },
+      "escalation": [],
+      "notes": "RBI cancelled the licence on 24 Apr 2026 (close of business). Delhi High Court ordered winding up (orders of 8 and 22 Jul 2026) and appointed Shri Girikumar M Nair as Official Liquidator (RBI press release 28 Jul 2026). No liquidator contact published by RBI. PNO data is undated and pre-liquidation; do not route users to it without a warning. Paytm app/UPI are run by One 97 Communications, not the bank.",
+      "sources": [
+        {
+          "url": "https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62621",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63249",
+          "checked": "2026-10-16"
+        },
+        {
+          "url": "https://www.paytm.bank.in/Policies/Details-of-PNO.pdf?v=2.0",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    }
+  ],
+  "upi_apps": [
+    {
+      "id": "phonepe",
+      "name": "PhonePe",
+      "type": "upi_app",
+      "customer_care": [
+        "080-68727374",
+        "022-68727374"
+      ],
+      "level2_url": "https://grievance.phonepe.com/",
+      "nodal_officer_url": "https://grievance.phonepe.com/nodal-officer",
+      "nodal_officer": {
+        "name": "Ms. Deepa Shetty",
+        "phone": "080-68727105"
+      },
+      "principal_nodal_officer": {
+        "name": "Mr. Aniket Baheti",
+        "email": null
+      },
+      "address": "Office-2, Floor 4,5,6,7, Wing A, Block A, Salarpuria Softzone, Service Road, Green Glen Layout, Bellandur, Bengaluru 560103",
+      "notes": "Emails obfuscated on page. RBI Ombudsman applies only to PhonePe prepaid instruments; UPI disputes go via the bank/PSP.",
+      "sources": [
+        {
+          "url": "https://www.phonepe.com/grievance-policy/",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "gpay",
+      "name": "Google Pay (India)",
+      "type": "upi_app",
+      "customer_care": [
+        "1800-419-0157"
+      ],
+      "level2_url": "https://support.google.com/pay/india/contact/gpayindia_go_complaints",
+      "nodal_officer_url": "https://support.google.com/pay/india/contact/gpayindia_consumer_support_nodal_officer",
+      "nodal_officer": {
+        "name": "Rahul Dhiman",
+        "email": null,
+        "phone": null
+      },
+      "principal_nodal_officer": null,
+      "address": "5th Floor, DLF Centre, Block 124, Narindra Place, Sansad Marg, New Delhi Central, New Delhi - 110001",
+      "notes": "Escalate after 15 days at each level. Can also complain to PSP bank (Axis, ICICI, HDFC, SBI).",
+      "sources": [
+        {
+          "url": "https://support.google.com/pay/india/answer/10084701?hl=en",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "paytm",
+      "name": "Paytm (One 97 Communications)",
+      "type": "upi_app",
+      "customer_care": [],
+      "level2_url": null,
+      "nodal_officer_url": null,
+      "nodal_officer": null,
+      "principal_nodal_officer": null,
+      "address": null,
+      "help_urls": [
+        "https://paytm.com/care",
+        "https://paytm.com/care/customer-care",
+        "https://ir.paytm.com/policies-and-guidelines"
+      ],
+      "notes": "Official pages are JS-rendered; no number or officer could be verified. Only help URLs confirmed.",
+      "sources": [
+        {
+          "url": "https://paytm.com/grievance-redressal",
+          "checked": "2026-10-16"
+        }
+      ],
+      "checked": "2026-10-16"
+    }
+  ]
+}

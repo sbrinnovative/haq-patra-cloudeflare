@@ -1,0 +1,96 @@
+{
+  "dataset": "Regulators, helplines and portals",
+  "checked": "2026-10-16",
+  "contacts": [
+    {
+      "id": "irdai_bima_bharosa",
+      "name": "IRDAI Bima Bharosa (Integrated Grievance Management)",
+      "portal_url": "https://bimabharosa.irdai.gov.in/",
+      "email": "complaints@irdai.gov.in",
+      "toll_free": ["155255", "1800 4254 732"],
+      "postal_address": "Insurance Regulatory and Development Authority of India, Consumer Affairs Department - Grievance Redressal Cell, Sy.No.115/1, Financial District, Nanakramguda, Gachibowli, Hyderabad - 500 032",
+      "notes": "Portal states it never asks for payment. Call centre hours not published on the Call Center page.",
+      "sources": [
+        {"url": "https://bimabharosa.irdai.gov.in/Home/ContactUs", "checked": "2026-10-16"},
+        {"url": "https://bimabharosa.irdai.gov.in/Home/CallCenter", "checked": "2026-10-16"}
+      ]
+    },
+    {
+      "id": "insurance_ombudsman_online",
+      "name": "Insurance Ombudsman online complaint (Council for Insurance Ombudsmen)",
+      "portal_url": "https://cioins.co.in/Complaint/Online",
+      "track_url": "https://cioins.co.in/Complaint/Track",
+      "office_list_url": "https://www.cioins.co.in/ombudsman",
+      "email": "inscoun@cioins.co.in",
+      "phones": ["022-69038800", "022-69038812"],
+      "notes": "Office-level contacts are in ombudsman_offices.json.",
+      "sources": [{"url": "https://www.cioins.co.in/", "checked": "2026-10-16"}]
+    },
+    {
+      "id": "rbi_cms",
+      "name": "RBI Complaint Management System (Reserve Bank - Integrated Ombudsman Scheme, 2026)",
+      "portal_url": "https://cms.rbi.org.in",
+      "email": "crpc@rbi.org.in",
+      "contact_centre": "14448",
+      "crpc_postal_address": "Centralised Receipt and Processing Centre, 4th Floor, Reserve Bank of India, Sector-17, Central Vista, Chandigarh - 160017",
+      "crpc_postal_address_annex_variant": "Centralized Receipt and Processing Centre (CRPC), Reserve Bank of India, Central Vista, Sector 17, Chandigarh - 160 017",
+      "scheme": {
+        "title": "Reserve Bank - Integrated Ombudsman Scheme, 2026",
+        "issued": "2026-01-16",
+        "in_force_from": "2026-07-01",
+        "scheme_pdf": "https://rbidocs.rbi.org.in/rdocs/content/pdfs/SCHEME16012026_A.pdf",
+        "time_limits": "Clause 10(1)(f): no reply from the regulated entity within 30 days (or longer NPCI/card-network timeline). Clause 10(1)(g): file within 90 days from expiry of that timeline or the date of the entity's last communication, whichever is later. No one-year rule in the 2026 scheme."
+      },
+      "notes": "Address, email, portal, 14448 and time limits quoted from the scheme text (clauses 6(2), 11(1), 11(2), 10(1)(f)-(g); Annex Part A paras 2, 6, 7). rbidocs.rbi.org.in serves a human-verification page to automated fetchers, so the scheme text was read from a regulated entity's verbatim copy; the RBI press release (prid=62052) confirms the PDF link and dates. RBI 'Complaints' page also lists crpc@rbi.org.in. cms.rbi.org.in itself blocks automated fetch.",
+      "sources": [
+        {"url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62052", "checked": "2026-10-16", "fields": "scheme title, dates, scheme PDF URL"},
+        {"url": "https://www.ujjivansfb.bank.in/assets/1_RESERVE_BANK_INTEGRATED_OMBUDSMAN_SCHEME_2026_9f0db1d061.pdf", "checked": "2026-10-16", "fields": "CRPC address, email, portal, 14448, time limits (copy of RBI scheme)"},
+        {"url": "https://www.rbi.org.in/Scripts/Complaints.aspx", "checked": "2026-10-16", "fields": "crpc@rbi.org.in, CMS URL"}
+      ]
+    },
+    {
+      "id": "cyber_1930",
+      "name": "National Cyber Crime Reporting (financial fraud helpline 1930)",
+      "helpline": "1930",
+      "portal_url": "https://cybercrime.gov.in/",
+      "operator": "Indian Cyber Crime Coordination Centre (I4C), Ministry of Home Affairs",
+      "guidance": "Call 1930, keep the acknowledgement number from the SMS, and submit full details on the National Cybercrime Reporting Portal within 24 hours.",
+      "notes": "cybercrime.gov.in blocks automated fetching; portal URL corroborated by official bank pages (Airtel Payments Bank, Bank of India). 1930 replaced the earlier 155260.",
+      "sources": [
+        {"url": "https://en.vikaspedia.in/viewcontent/e-governance/citizen-services/citizen-financial-cyber-fraud-reporting-and-management-system?lgn=en", "checked": "2026-10-16"},
+        {"url": "https://www.airtelpayments.bank.in/static/contact-us", "checked": "2026-10-16", "fields": "portal URL"}
+      ]
+    },
+    {
+      "id": "npci_upi_dispute",
+      "name": "NPCI UPI Dispute Redressal Mechanism",
+      "page_url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+      "escalation_order": ["UPI app (TPAP)", "PSP bank", "customer's own bank", "NPCI", "RBI Ombudsman (CMS)"],
+      "email": null,
+      "phone": null,
+      "notes": "NPCI page gives the escalation order but no NPCI email, phone or online form URL in readable content.",
+      "sources": [{"url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism", "checked": "2026-10-16"}]
+    },
+    {
+      "id": "nch",
+      "name": "National Consumer Helpline (Department of Consumer Affairs)",
+      "toll_free": "1915",
+      "hours": "8 AM to 8 PM",
+      "whatsapp": "+91 8800001915",
+      "sms": "+91 8800001915",
+      "portal_url": "https://consumerhelpline.gov.in/user/signup.php",
+      "apps": ["NCH app (Google Play)", "UMANG (https://consumerhelpline.gov.in/apps/umang/)"],
+      "sources": [{"url": "https://consumerhelpline.gov.in/", "checked": "2026-10-16"}]
+    },
+    {
+      "id": "e_jagriti",
+      "name": "e-Jagriti (online filing with Consumer Commissions; successor to e-Daakhil)",
+      "portal_url": "https://e-jagriti.gov.in/",
+      "notes": "Official site is JS-only; page title confirms 'e-Jagriti Platform', Ministry of Consumer Affairs. Vikaspedia (government portal) describes it as 'e-Jagriti (earlier E-Daakhil portal)'. Fees and helpline not verified.",
+      "sources": [
+        {"url": "https://e-jagriti.gov.in/", "checked": "2026-10-16"},
+        {"url": "https://en.vikaspedia.in/viewcontent/social-welfare/social-awareness/consumer-education/e-jagriti-portal-for-consumer-grievance-redressal?lgn=en", "checked": "2026-10-16"}
+      ]
+    }
+  ]
+}
