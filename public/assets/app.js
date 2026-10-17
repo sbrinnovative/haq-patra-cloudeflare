@@ -133,11 +133,11 @@ var VIEWS={};
 
 VIEWS.home=function(){
   function opt(k){ return '<button type="button" class="start" data-start="'+k+'"><span class="ic">'+svg(k)+'</span><span><span class="start-t">'+esc(t("start_"+k+"_t"))+'</span><span class="start-d">'+esc(t("start_"+k+"_d"))+'</span></span>'+svg("go","go")+'</button>'; }
-  var h='<div class="sos" role="note"><p><b>'+esc(t("urgent_title"))+'</b> '+esc(t("urgent_body"))+'</p><a class="call" href="tel:1930">'+svg("phone")+'1930</a></div>'+
-    '<section class="hero"><h1>'+esc(t("tagline"))+'</h1>'+trustRow()+'</section>'+
+  var h='<div class="home"><div class="home-l"><div class="sos" role="note"><p><b>'+esc(t("urgent_title"))+'</b> '+esc(t("urgent_body"))+'</p><a class="call" href="tel:1930">'+svg("phone")+'1930</a></div>'+
+    '<section class="hero"><h1>'+esc(t("tagline"))+'</h1>'+trustRow()+'</section><p class="lead">'+esc(t("sub"))+'</p></div>'+
     '<section class="inland" aria-labelledby="startH">'+postmark()+'<h2 id="startH">'+esc(t("home_q"))+'</h2><div class="starts">'+opt("words")+opt("upload")+opt("questions")+'</div>'+
     '<div class="helper"><label class="check-row"><input type="checkbox" id="helperChk"'+(S.helper?" checked":"")+'> <span>'+esc(t("helper_label"))+'</span></label>'+
-    (S.helper?'<p class="note" style="margin-top:8px">'+esc(t("helper_note"))+'</p>':'')+'</div></section><p class="lead">'+esc(t("sub"))+'</p>';
+    (S.helper?'<p class="note" style="margin-top:8px">'+esc(t("helper_note"))+'</p>':'')+'</div></section></div>';
   app.innerHTML=h;
   $("#helperChk").addEventListener("change",function(e){ S.helper=e.target.checked; render(); });
   app.querySelectorAll("[data-start]").forEach(function(b){ b.addEventListener("click",function(){
@@ -380,17 +380,17 @@ VIEWS.result=function(){
   function tx(obj,key){ var s=obj[L]; if(tr&&tr[key]!==undefined) return tr[key]; return s; }
   var labs={ok:t("pill_ok"),warn:t("pill_warn"),stop:t("pill_stop"),info:t("pill_info")};
   var h='<section class="panel result"><div class="row between"><h2>'+esc(t("res_title"))+'</h2>'+listenButton(function(){ return speechText(p,tr); }, tr||S.lang==="hi"||S.lang==="en"?S.lang:"en")+'</div>';
-  if(S.summary) h+='<div class="aisum"><p class="eyebrow">'+esc(t("res_summary"))+'</p><p>'+esc(S.summary)+'</p></div>';
+  if(S.summary) h+='<div class="aisum r-sum"><p class="eyebrow">'+esc(t("res_summary"))+'</p><p>'+esc(S.summary)+'</p></div>';
   if(S.lang!=="en"&&S.lang!=="hi") h+='<p class="note small" id="trNote">'+esc(S.trans?t("translated_note"):t("translating"))+(S.trans?' <button type="button" class="linkbtn small" id="origBtn">'+esc(S.showOrig?t("show_translation"):t("show_original"))+'</button>':'')+'</p>';
-  h+='<h3>'+esc(t("res_checks"))+'</h3><div class="checks">'+p.checks.map(function(x,i){ return '<div class="check '+x.k+'"><span class="pill">'+esc(labs[x.k])+'</span><div><b>'+esc(tx(x.t,"ct"+i))+'</b><p>'+esc(tx(x.b,"cb"+i))+'</p>'+(x.s.length?'<p class="src">'+esc(t("source"))+': '+x.s.map(function(s){ var r=R.SRC[s]; return r?'<a href="'+esc(r.u)+'" target="_blank" rel="noopener">'+esc(r.t)+'</a>':""; }).join(" · ")+'</p>':'')+'</div></div>'; }).join("")+'</div>';
-  h+='<h3>'+esc(t("res_steps"))+'</h3><ol class="ladder">'+p.ladder.map(function(s,i){ var title=tx(s.t,"lt"+i); var cd=s.calDate||s.date; return '<li class="'+s.st+'"><span class="dot" aria-hidden="true"></span><div><div class="step-t">'+esc(title)+(s.date?' <span class="stamp">'+esc(R.fd(s.date,L))+'</span>':'')+'</div><div class="step-d">'+esc(tx(s.d,"ld"+i))+(s.st==="missed"?" ("+esc(t("date_passed"))+")":"")+'</div>'+(s.cal&&cd?calLinks(title+" (Haq Patra)",cd):'')+'</div></li>'; }).join("")+'</ol>';
-  h+='<h3>'+esc(t("res_contacts"))+'</h3><div class="cards">'+contactsHTML(p)+'</div>';
+  h+='<section class="r-checks"><h3>'+esc(t("res_checks"))+'</h3><div class="checks">'+p.checks.map(function(x,i){ return '<div class="check '+x.k+'"><span class="pill">'+esc(labs[x.k])+'</span><div><b>'+esc(tx(x.t,"ct"+i))+'</b><p>'+esc(tx(x.b,"cb"+i))+'</p>'+(x.s.length?'<p class="src">'+esc(t("source"))+': '+x.s.map(function(s){ var r=R.SRC[s]; return r?'<a href="'+esc(r.u)+'" target="_blank" rel="noopener">'+esc(r.t)+'</a>':""; }).join(" · ")+'</p>':'')+'</div></div>'; }).join("")+'</div></section>';
+  h+='<section class="r-steps"><h3>'+esc(t("res_steps"))+'</h3><ol class="ladder">'+p.ladder.map(function(s,i){ var title=tx(s.t,"lt"+i); var cd=s.calDate||s.date; return '<li class="'+s.st+'"><span class="dot" aria-hidden="true"></span><div><div class="step-t">'+esc(title)+(s.date?' <span class="stamp">'+esc(R.fd(s.date,L))+'</span>':'')+'</div><div class="step-d">'+esc(tx(s.d,"ld"+i))+(s.st==="missed"?" ("+esc(t("date_passed"))+")":"")+'</div>'+(s.cal&&cd?calLinks(title+" (Haq Patra)",cd):'')+'</div></li>'; }).join("")+'</ol></section>';
+  h+='<section class="r-contacts"><h3>'+esc(t("res_contacts"))+'</h3><div class="cards">'+contactsHTML(p)+'</div></section>';
   var lt=p.letters; if(S.tab<0||S.tab>=lt.list.length) S.tab=lt.def;
-  h+='<h3 id="lettersH">'+esc(t("res_letters"))+'</h3><div class="tabs" role="tablist">'+lt.list.map(function(l,i){ return '<button type="button" class="tab" role="tab" aria-selected="'+(i===S.tab)+'" data-tab="'+i+'">'+esc(l.t[L])+(i===lt.cur?'<span class="tag">'+esc(t("send_now"))+'</span>':'')+'</button>'; }).join("")+'</div>'+
+  h+='<section class="r-letters"><h3 id="lettersH">'+esc(t("res_letters"))+'</h3><div class="tabs" role="tablist">'+lt.list.map(function(l,i){ return '<button type="button" class="tab" role="tab" aria-selected="'+(i===S.tab)+'" data-tab="'+i+'">'+esc(l.t[L])+(i===lt.cur?'<span class="tag">'+esc(t("send_now"))+'</span>':'')+'</button>'; }).join("")+'</div>'+
     '<div class="row between"><div class="lang" role="group" aria-label="'+esc(t("letter_lang"))+'"><button type="button" data-ll="en" aria-pressed="'+(S.letterLang==="en")+'">English</button><button type="button" data-ll="hi" aria-pressed="'+(S.letterLang==="hi")+'">हिंदी</button></div>'+
     '<div class="row"><button type="button" class="btn small" id="copyBtn">'+esc(t("copy_letter"))+'</button><button type="button" class="btn ghost small" id="mailBtn">'+esc(t("email_it"))+'</button><button type="button" class="btn ghost small" id="shareBtn">'+esc(t("share"))+'</button><button type="button" class="btn ghost small" id="printBtn" hidden>'+esc(t("print"))+'</button></div></div>'+
-    '<p class="status" id="lst" role="status" aria-live="polite"></p><div class="sheet"><pre class="letter" id="letterText"></pre></div><p class="small muted">'+esc(t("letter_check"))+'</p>';
-  h+='<div class="row"><button type="button" class="btn ghost" id="editBtn">'+esc(t("edit_answers"))+'</button><button type="button" class="btn ghost" id="restartBtn">'+esc(t("start_over"))+'</button></div></section>';
+    '<p class="status" id="lst" role="status" aria-live="polite"></p><div class="sheet"><pre class="letter" id="letterText"></pre></div><p class="small muted">'+esc(t("letter_check"))+'</p></section>';
+  h+='<div class="row r-end"><button type="button" class="btn ghost" id="editBtn">'+esc(t("edit_answers"))+'</button><button type="button" class="btn ghost" id="restartBtn">'+esc(t("start_over"))+'</button></div></section>';
   app.innerHTML=h;
   var cur=lt.list[S.tab]; $("#letterText").textContent=cur[S.letterLang];
   app.querySelectorAll("[data-tab]").forEach(function(b){ b.addEventListener("click",function(){ S.tab=+b.getAttribute("data-tab"); save(); app.querySelectorAll("[data-tab]").forEach(function(x){ x.setAttribute("aria-selected",String(x===b)); }); $("#letterText").textContent=lt.list[S.tab][S.letterLang]; }); });
@@ -400,7 +400,7 @@ VIEWS.result=function(){
   $("#shareBtn").addEventListener("click",function(){ var txt=lt.list[S.tab][S.letterLang]; if(navigator.share){ navigator.share({title:"Haq Patra",text:txt}).catch(function(){}); } else { window.open("https://wa.me/?text="+encodeURIComponent(txt.slice(0,3000)),"_blank","noopener"); } });
   try{ if(window.self===window.top){ var pb=$("#printBtn"); pb.hidden=false; pb.addEventListener("click",function(){ window.print(); }); } }catch(e){}
   $("#editBtn").addEventListener("click",function(){ S.view="review"; render(); });
-  $("#restartBtn").addEventListener("click",function(){ S.f={}; S.found={}; S.mod=null; S.summary=null; S.view="home"; render(); });
+  $("#restartBtn").addEventListener("click",function(){ resetAll(); render(); });
   app.querySelectorAll("[data-copy]").forEach(function(b){ b.addEventListener("click",function(){ copyText(b.getAttribute("data-copy"),null,null); b.textContent=t("copied_short"); }); });
   app.querySelectorAll("[data-ics]").forEach(function(b){ b.addEventListener("click",function(){ downloadICS(b.getAttribute("data-ics"),b.getAttribute("data-title")); }); });
   var ob=$("#origBtn"); if(ob) ob.addEventListener("click",function(){ S.showOrig=!S.showOrig; render(); });
@@ -430,14 +430,18 @@ VIEWS.other=function(){
   app.querySelectorAll("[data-copy]").forEach(function(b){ b.addEventListener("click",function(){ copyText(b.getAttribute("data-copy"),null,null); b.textContent=t("copied_short"); }); });
 };
 
+function resetAll(){ stopSpeak(); S.f={}; S.found={}; S.mod=null; S.summary=null; S.used=null; S.qi=0; S.tab=-1; S.trans=null; S.showOrig=false; S.fromAnalysis=false; S.notice=null; S.view="home"; }
 /* ---------- start ---------- */
 function boot(){
   app=document.getElementById("app");
   restore();
+  /* a fresh visit (link, typed address, logo) starts at home; only a reload or back/forward keeps the user's place */
+  try{ var nt=(performance.getEntriesByType("navigation")[0]||{}).type; if(nt==="navigate"||nt==="prerender") resetAll(); }catch(e){}
   var l=S.lang&&S.view!=="home"?S.lang:initLang();
   var sel=document.getElementById("langSel");
   if(sel){ sel.innerHTML=LANGS.map(function(x){ return '<option value="'+x[0]+'">'+x[1]+'</option>'; }).join(""); sel.addEventListener("change",function(){ setLang(sel.value); }); }
   try{ var hsh=(location.hash||"").replace("#",""); if(hsh==="bank"||hsh==="health"){ S.mod=hsh; S.f={}; S.found={}; S.view="wizard"; S.qi=0; S.fromAnalysis=false; } }catch(e){}
+  document.querySelectorAll("a.brand").forEach(function(a){ a.addEventListener("click",function(e){ e.preventDefault(); resetAll(); try{ history.replaceState(null,"",location.pathname); }catch(x){} render(); }); });
   setLang(l);
   if(canSpeak()){ try{ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged=function(){}; }catch(e){} }
 }
