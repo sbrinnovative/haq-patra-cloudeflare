@@ -261,6 +261,18 @@ def main():
     ads = PUB / "ads.txt"
     if ADSENSE_CLIENT: ads.write_text(f"google.com, {ADSENSE_CLIENT.replace('ca-', '')}, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
     elif ads.exists(): ads.unlink()
+    # cache busting: every page asks for assets with ?v=<content hash>, so visitors get changes at once
+    import hashlib
+    def h8(b): return hashlib.sha256(b).hexdigest()[:8]
+    i18n_v = h8(b"".join(p.read_bytes() for p in sorted((PUB / "assets").glob("i18n-*.js"))))
+    appjs = PUB / "assets" / "app.js"
+    appjs.write_text(re.sub(r'"assets/i18n-"\+l\+"\.js(?:\?v=\w+)?"', '"assets/i18n-"+l+".js?v=' + i18n_v + '"', appjs.read_text(encoding="utf-8")), encoding="utf-8")
+    vers = {p.name: h8(p.read_bytes()) for p in (PUB / "assets").iterdir() if p.suffix in (".css", ".js")}
+    for p in PUB.rglob("*.html"):
+        s = p.read_text(encoding="utf-8")
+        s2 = re.sub(r'(assets/)([\w.-]+\.(?:css|js))(?:\?v=\w+)?"', lambda m: m.group(1) + m.group(2) + ("?v=" + vers[m.group(2)] if m.group(2) in vers else "") + '"', s)
+        if s2 != s: p.write_text(s2, encoding="utf-8")
+    idx = (PUB / "index.html").read_text(encoding="utf-8")
     (PUB / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(self), microphone=(self), geolocation=()\n/assets/*\n  Cache-Control: public, max-age=3600\n", encoding="utf-8")
     # preview copy for claude.ai: index.html becomes a fragment
     prev = ROOT / "preview"

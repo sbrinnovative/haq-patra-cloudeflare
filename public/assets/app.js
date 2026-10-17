@@ -26,7 +26,7 @@ function render(){ save(); var fn=VIEWS[S.view]||VIEWS.home; app.innerHTML=""; f
 
 function setLang(l){
   if(!I18N[l]){
-    var s=document.createElement("script"); s.src="assets/i18n-"+l+".js";
+    var s=document.createElement("script"); s.src="assets/i18n-"+l+".js?v=1a77250b";
     s.onload=function(){ setLang(I18N[l]?l:"en"); }; s.onerror=function(){ setLang("en"); };
     document.head.appendChild(s); return;
   }
