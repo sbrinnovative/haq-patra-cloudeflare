@@ -2,8 +2,8 @@
    Missing keys fall back to English. Rule checks and letters are English or Hindi (see rules.js). */
 window.HAQ_I18N = window.HAQ_I18N || {};
 window.HAQ_I18N.en = {
-side_next:"What happens next",side_s1:"We read your problem and fill in what we can.",side_s2:"You check each answer and fill any gaps.",side_s3:"You get your rights, your dates, the right officer to contact and a ready letter.",side_answers:"Your answers so far",side_none:"Your answers will show here as you go.",side_upload_tip:"A clear photo works best: flat page, good light, all four corners in view.",
-tagline:"Insurance claim rejected? Bank not returning your money? Get the right letter, to the right office, before the deadline.",
+footer_line:"General information for education only. Not legal advice. Not linked to any government body, insurer or bank.",time_note:"About 5 minutes. No sign-up, no fees.",disc_short:"General information for education only, not legal advice. By using this site you accept the",disc_link:"disclaimer",res_disclaimer:"This plan and letter are general information for education, based on the details you gave and public rules. They are not legal advice. Check each detail with the official source, and speak to an advocate for a large or complicated case.",about_link:"About and disclaimer",side_next:"What happens next",side_s1:"We read your problem and fill in what we can.",side_s2:"You check each answer and fill any gaps.",side_s3:"You get your rights, your dates, the right officer to contact and a ready letter.",side_answers:"Your answers so far",side_none:"Your answers will show here as you go.",side_upload_tip:"A clear photo works best: flat page, good light, all four corners in view.",
+tagline:"Claim rejected or money stuck? Get the right letter to the right person, on time.",
 sub:"Free help in your language. Tell us what happened, upload the letter you got, or answer simple questions. You get your rights in plain words, your dates, the exact people to contact, and a ready letter.",
 promise_free:"Free, no fees ever", promise_private:"Nothing you type is stored", promise_noagent:"No agent will call you",
 urgent_title:"Money just taken by fraud?", urgent_body:"Call 1930 now and block your card or UPI in your bank app. Then come back here.",
@@ -82,12 +82,12 @@ c_care:"Customer care", c_complaint_portal:"Complaint page", c_level2:"Escalatio
 c_npci:"NPCI UPI disputes", c_npci_order:"For UPI, complain in the app first, then the bank, then RBI.", c_rbi:"RBI Ombudsman",
 c_insurance_any:"Any insurance", c_io_any:"For life, motor or other insurance, write to the insurer's grievance officer first, then the Insurance Ombudsman (free, up to ₹50 lakh, within one year).",
 other_title:"Help for other problems", other_body:"Haq Patra writes letters for health insurance claims and bank problems. For other consumer problems, these free official services help.", other_try:"Choose a problem type",
-footer_disclaimer:"Haq Patra explains public rules and fills letter templates. It is a self-help tool, not a lawyer, and not connected to IRDAI, RBI, any insurer or any bank."
+footer_disclaimer:"Haq Patra is an independent website for general information and education only. It is not legal advice, not a law firm, and not connected to IRDAI, RBI, any government body, insurer or bank. Check every detail with the official source before you act."
 };
 
 window.HAQ_I18N.hi = {
-side_next:"आगे क्या होगा",side_s1:"हम आपकी समस्या पढ़कर जो हो सके भर देते हैं।",side_s2:"आप हर जवाब जाँचते हैं और जो छूटा है भरते हैं।",side_s3:"आपको आपके अधिकार, तारीखें, संपर्क के लिए सही अधिकारी और तैयार पत्र मिलता है।",side_answers:"अब तक के आपके जवाब",side_none:"जैसे-जैसे आप जवाब देंगे, वे यहाँ दिखेंगे।",side_upload_tip:"साफ़ फ़ोटो सबसे अच्छी रहती है: पेज सीधा, रोशनी अच्छी, चारों कोने दिखें।",
-tagline:"बीमा दावा अस्वीकार हुआ? बैंक पैसा नहीं लौटा रहा? सही दफ़्तर को, समय-सीमा से पहले, सही पत्र भेजें।",
+footer_line:"केवल शिक्षा के लिए सामान्य जानकारी। कानूनी सलाह नहीं। किसी सरकारी संस्था, बीमा कंपनी या बैंक से जुड़ा नहीं।",time_note:"लगभग 5 मिनट। कोई साइन-अप नहीं, कोई फ़ीस नहीं।",disc_short:"केवल शिक्षा के लिए सामान्य जानकारी, कानूनी सलाह नहीं। इस साइट का उपयोग करके आप यह स्वीकार करते हैं:",disc_link:"अस्वीकरण",res_disclaimer:"यह योजना और पत्र आपके दिए विवरण और सार्वजनिक नियमों पर आधारित सामान्य, शैक्षिक जानकारी है। यह कानूनी सलाह नहीं है। हर जानकारी आधिकारिक स्रोत से जाँचें, और बड़े या उलझे मामले में किसी वकील से बात करें।",about_link:"परिचय और अस्वीकरण",side_next:"आगे क्या होगा",side_s1:"हम आपकी समस्या पढ़कर जो हो सके भर देते हैं।",side_s2:"आप हर जवाब जाँचते हैं और जो छूटा है भरते हैं।",side_s3:"आपको आपके अधिकार, तारीखें, संपर्क के लिए सही अधिकारी और तैयार पत्र मिलता है।",side_answers:"अब तक के आपके जवाब",side_none:"जैसे-जैसे आप जवाब देंगे, वे यहाँ दिखेंगे।",side_upload_tip:"साफ़ फ़ोटो सबसे अच्छी रहती है: पेज सीधा, रोशनी अच्छी, चारों कोने दिखें।",
+tagline:"दावा अस्वीकार हुआ या पैसा अटका है? सही व्यक्ति को, समय पर, सही पत्र भेजें।",
 sub:"आपकी भाषा में मुफ़्त मदद। बताइए क्या हुआ, मिला हुआ पत्र अपलोड कीजिए, या आसान सवालों के जवाब दीजिए। आपको सरल शब्दों में आपके अधिकार, आपकी तारीखें, संपर्क करने वाले सही लोग और तैयार पत्र मिलेगा।",
 promise_free:"मुफ़्त, कोई फ़ीस नहीं", promise_private:"आपका लिखा कुछ भी सेव नहीं होता", promise_noagent:"कोई एजेंट फ़ोन नहीं करेगा",
 urgent_title:"धोखे से अभी पैसा कटा है?", urgent_body:"तुरंत 1930 पर कॉल करें और बैंक ऐप में कार्ड या UPI ब्लॉक करें। फिर यहाँ लौटें।",
@@ -166,5 +166,5 @@ c_care:"कस्टमर केयर", c_complaint_portal:"शिकायत
 c_npci:"NPCI UPI विवाद", c_npci_order:"UPI में पहले ऐप में शिकायत करें, फिर बैंक, फिर RBI।", c_rbi:"RBI लोकपाल",
 c_insurance_any:"कोई भी बीमा", c_io_any:"जीवन, वाहन या दूसरे बीमा में पहले कंपनी के शिकायत अधिकारी को लिखें, फिर बीमा लोकपाल के पास जाएँ (मुफ़्त, ₹50 लाख तक, एक साल के भीतर)।",
 other_title:"दूसरी समस्याओं में मदद", other_body:"हक़ पत्र स्वास्थ्य बीमा दावों और बैंक की समस्याओं के लिए पत्र बनाता है। दूसरी उपभोक्ता समस्याओं में ये मुफ़्त सरकारी सेवाएँ मदद करती हैं।", other_try:"समस्या का प्रकार चुनें",
-footer_disclaimer:"हक़ पत्र सार्वजनिक नियम समझाता है और पत्र के नमूने भरता है। यह स्वयं-सहायता टूल है, वकील नहीं, और IRDAI, RBI, किसी बीमा कंपनी या बैंक से जुड़ा नहीं है।"
+footer_disclaimer:"हक़ पत्र एक स्वतंत्र वेबसाइट है, जो केवल सामान्य जानकारी और शिक्षा के लिए है। यह कानूनी सलाह नहीं है, कोई लॉ फ़र्म नहीं है, और IRDAI, RBI, किसी सरकारी संस्था, बीमा कंपनी या बैंक से जुड़ी नहीं है। कुछ भी करने से पहले हर जानकारी आधिकारिक स्रोत से जाँच लें।"
 };

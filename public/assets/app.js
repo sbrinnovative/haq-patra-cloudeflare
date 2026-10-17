@@ -148,11 +148,11 @@ var VIEWS={};
 
 VIEWS.home=function(){
   function opt(k){ return '<button type="button" class="start" data-start="'+k+'"><span class="ic">'+svg(k)+'</span><span><span class="start-t">'+esc(t("start_"+k+"_t"))+'</span><span class="start-d">'+esc(t("start_"+k+"_d"))+'</span></span>'+svg("go","go")+'</button>'; }
-  var h='<div class="home"><div class="home-l"><div class="sos" role="note"><p><b>'+esc(t("urgent_title"))+'</b> '+esc(t("urgent_body"))+'</p><a class="call" href="tel:1930">'+svg("phone")+'1930</a></div>'+
+  var h='<div class="home"><div class="home-l"><div class="sos" role="note"><p><b>'+esc(t("urgent_title"))+'</b> <span>'+esc(t("urgent_body"))+'</span></p><a class="call" href="tel:1930">'+svg("phone")+'1930</a></div>'+
     '<section class="hero"><h1>'+esc(t("tagline"))+'</h1>'+trustRow()+'</section><p class="lead">'+esc(t("sub"))+'</p></div>'+
-    '<section class="inland" aria-labelledby="startH">'+postmark()+'<h2 id="startH">'+esc(t("home_q"))+'</h2><div class="starts">'+opt("words")+opt("upload")+opt("questions")+'</div>'+
+    '<section class="inland" aria-labelledby="startH">'+postmark()+'<h2 id="startH">'+esc(t("home_q"))+'</h2><p class="time">'+esc(t("time_note"))+'</p><div class="starts">'+opt("words")+opt("upload")+opt("questions")+'</div>'+
     '<div class="helper"><label class="check-row"><input type="checkbox" id="helperChk"'+(S.helper?" checked":"")+'> <span>'+esc(t("helper_label"))+'</span></label>'+
-    (S.helper?'<p class="note" style="margin-top:8px">'+esc(t("helper_note"))+'</p>':'')+'</div></section></div>';
+    (S.helper?'<p class="note" style="margin-top:8px">'+esc(t("helper_note"))+'</p>':'')+'</div><p class="disc">'+esc(t("disc_short"))+' <a href="about.html#disclaimer">'+esc(t("disc_link"))+'</a>.</p></section></div>';
   app.innerHTML=h;
   $("#helperChk").addEventListener("change",function(e){ S.helper=e.target.checked; render(); });
   app.querySelectorAll("[data-start]").forEach(function(b){ b.addEventListener("click",function(){
@@ -406,7 +406,7 @@ VIEWS.result=function(){
   h+='<section class="r-letters"><h3 id="lettersH">'+esc(t("res_letters"))+'</h3><div class="tabs" role="tablist">'+lt.list.map(function(l,i){ return '<button type="button" class="tab" role="tab" aria-selected="'+(i===S.tab)+'" data-tab="'+i+'">'+esc(l.t[L])+(i===lt.cur?'<span class="tag">'+esc(t("send_now"))+'</span>':'')+'</button>'; }).join("")+'</div>'+
     '<div class="row between"><div class="lang" role="group" aria-label="'+esc(t("letter_lang"))+'"><button type="button" data-ll="en" aria-pressed="'+(S.letterLang==="en")+'">English</button><button type="button" data-ll="hi" aria-pressed="'+(S.letterLang==="hi")+'">हिंदी</button></div>'+
     '<div class="row"><button type="button" class="btn small" id="copyBtn">'+esc(t("copy_letter"))+'</button><button type="button" class="btn ghost small" id="mailBtn">'+esc(t("email_it"))+'</button><button type="button" class="btn ghost small" id="shareBtn">'+esc(t("share"))+'</button><button type="button" class="btn ghost small" id="printBtn" hidden>'+esc(t("print"))+'</button></div></div>'+
-    '<p class="status" id="lst" role="status" aria-live="polite"></p><div class="sheet"><pre class="letter" id="letterText"></pre></div><p class="small muted">'+esc(t("letter_check"))+'</p></section>';
+    '<p class="status" id="lst" role="status" aria-live="polite"></p><div class="sheet"><pre class="letter" id="letterText"></pre></div><p class="small muted">'+esc(t("letter_check"))+'</p><p class="disc">'+esc(t("res_disclaimer"))+' <a href="about.html#disclaimer">'+esc(t("disc_link"))+'</a></p></section>';
   h+='<div class="row r-end"><button type="button" class="btn ghost" id="editBtn">'+esc(t("edit_answers"))+'</button><button type="button" class="btn ghost" id="restartBtn">'+esc(t("start_over"))+'</button></div></section>';
   app.innerHTML=h;
   var cur=lt.list[S.tab]; $("#letterText").textContent=cur[S.letterLang];
